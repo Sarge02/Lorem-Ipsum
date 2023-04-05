@@ -4,3 +4,4 @@ Team Members:
 Megan Gross
 Sameer Shaik
 Ryan Sarginson
+Covi Singh
