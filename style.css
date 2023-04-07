@@ -62,14 +62,14 @@ nav {
 }
 
 /* Ryan css changes */
-.loginContainer {
+.registrationContainer {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 60%;
     margin: 10px;
     text-align: left;
 }
 
-.loginInnerCard {
+.registrationInnerCard {
     padding: 20px 50px;
 }
 
