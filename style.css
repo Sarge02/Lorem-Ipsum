@@ -60,3 +60,19 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* Ryan css changes */
+.loginContainer {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 60%;
+    margin: 10px;
+    text-align: left;
+}
+
+.loginInnerCard {
+    padding: 20px 50px;
+}
+
+.h2 {
+    padding: 20px 20px;
+}
