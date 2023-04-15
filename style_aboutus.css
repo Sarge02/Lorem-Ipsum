@@ -11,10 +11,11 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px; 
     font-family: 'Alata';
     font-style: normal;
     font-weight: 400;
+    margin-right: 1.5%;
   }
   
   /* Change the color of links on hover */
@@ -41,8 +42,7 @@
   height: 96px;
   bottom: 0;
   width: 100%;
-
-
+  position: fixed;
 }
 
 /* Style the links inside the navigation bar */
@@ -76,11 +76,11 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 97.5%;
-  /* or 20px */
   text-align: center;
   left: 447px;
   top: 203px;
   color: #00189B;
+  padding: 0px 30% 50px 30%;
 }
 
 .heading{
