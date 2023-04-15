@@ -1,0 +1,96 @@
+.topContainer_about {
+    background-color:  #052534;
+    overflow: hidden;
+    height: 96px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topContainer_about a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  /* Change the color of links on hover */
+  .topContainer_about a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topContainer_about a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+
+ .bottomContainer_about {
+  background-color:  #052534;
+  overflow: hidden;
+  height: 96px;
+  bottom: 0;
+  width: 100%;
+
+
+}
+
+/* Style the links inside the navigation bar */
+.bottomContainer_about a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Change the color of links on hover */
+.bottomContainer_about a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.bottomContainer_about a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.text{  
+  font-family: 'Federo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 97.5%;
+  /* or 20px */
+  text-align: center;
+  left: 447px;
+  top: 203px;
+  color: #00189B;
+}
+
+.heading{
+  font-family: 'Halant';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 97.5%;
+/* or 31px */
+text-align: center;
+
+color: #000000;
+}
