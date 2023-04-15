@@ -1,66 +1,184 @@
-h1 {
+/* Megan ^-^ */
+/* */
+.homeHeader { /*Heading on top of Background Image on the Home Page*/
     color: white;
-    padding-top: 500px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 97.5%;
+    padding: 15px 15px 30px 15px;
+    position: relative;
 }
 
-nav {
+.helpButton{
+    width: 198px;
+    height: 53px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 97.5%;
+    text-align: center;
+    color: #00189B;
+    border-radius: 12px;
+    padding: 15px 15px 30px 15px;
+    margin-left: 60px;
+    position: relative;
+}
+
+.homeImageText {
+    margin: 10px 832px 93px 29px;
+    padding: 15px 15px 30px 15px;
+}
+
+nav { 
     overflow: hidden;
     background-color: white;
-    position: absolute;
     width: 100%;
 }
 
-.topContainer a{
-    float: right;
-    color:#333;
+nav a {
+    color:black;
+}
+
+nav a:hover{
+    background-color:rgb(235, 231, 231);
+}
+.topnav {
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
     text-align: center;
+    padding: 14px 16px;
+  }
+  
+  .topnav a:hover {
+    background-color:rgb(255, 255, 255);
+    color: black;
+  }
+
+  .logo {
+    width: 243px;
+    height: 116px;
+  }
+
+.topContainer a{  
+    float: right; 
     margin-right: 1.5%;
     padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
+    text-decoration:none;
+    font-size: 20px;
+} 
 
-.topContainer a:hover {
-    background-color:whitesmoke;
-    color: black;
-}
-
-.cardContainer {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.cardContainer { /*The container that holds all 9 cards on the Home page*/
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1), 5px -5px 14px rgba(0, 0, 0, 0.1);
     width: 20%;
     margin: 10px;
     text-align: center;
+    border-bottom: solid;
+    border-bottom-color:rgba(37, 71, 254, 0.31);
 }
 
-.innerCard:hover{
-    color: rgb(17, 17, 181);
-}
-
-.innerCard {
+.innerCard { /*The inner container that encompasses each individual card*/
     padding: 20px 50px;
 }
 
-.bigContainer {
+.innerCard p {
+    color: #00189B;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 97.5%;
+    text-align: left;
+}
+
+.innerCard h3 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 97.5%;
+}
+
+.bigContainer { /* */
     display: flex;
     justify-content: center;
 }
 
-.text {
+.text { /* */
     padding: 60px 40px;
 }
 
-.center {
+.center { /* */
     text-align: center;
+    vertical-align: top;
+    padding: 20px 20px 50px 20px;
+    margin-left: 18%;
+    margin-right: 18%;
 }
 
-.bgImg {
+.bgImg { 
+    background-color: rgb(81, 143, 194);
     background-image: url(images/image.jpg); 
     min-height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-blend-mode: multiply;
+    color: #fff;
+} 
+
+.reviewCards {
+    display: flex;
+    justify-content: center;
 }
 
+.indvReviewCard {
+    width: 321px;
+    height: 550px;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1), 5px -5px 14px 5px rgba(0, 0, 0, 0.02);
+    margin: 10px;
+    text-align: center;
+}
+
+.indvReviewCard h2 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 97.5%;
+    text-align: center;
+    color: #000000;
+    height: 40%;
+    margin: 122px 20px 0px 26px;
+}
+
+.indvReviewCard p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 97.5%;
+    color: #00189B;
+    position:static;
+}
+
+.indvReviewCard img {
+    margin: 22px 226px 0px 20px;
+}
+
+.reviewText h2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 97.5%;
+    text-align: center;
+    color: #00189B;
+}
+
+.reviewText h3 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 97.5%;
+    text-align: center;
+    color: #000000;
+}
+
+/* ************************************/ 
 /* Ryan css changes */
 .registrationContainer {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
