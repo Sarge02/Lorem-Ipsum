@@ -1,6 +1,54 @@
 /* Megan ^-^ */
 /* */
-.homeHeader { /*Heading on top of Background Image on the Home Page*/
+
+nav { /*This is the navigation for all pages except the home page. It has a white background.*/
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+}
+
+nav a { /* */
+    color:black;
+}
+
+nav a:hover{ /* */
+    background-color:rgb(235, 231, 231);
+}
+
+.topnav { /*This is the navigation for the homepage. Unlike the other pages, the nav has no background.*/
+    overflow: hidden;
+}
+  
+.topnav a { /* */
+    color: #f2f2f2;
+    padding: 14px 16px;
+}
+  
+.topnav a:hover { /* */
+    background-color:rgb(255, 255, 255);
+    color: black;
+}
+
+.topContainer a{ /*Container for the navigation*/
+    float: right; 
+    margin-right: 1.5%;
+    padding: 14px 16px;
+    text-decoration:none;
+    font-size: 20px;
+} 
+
+.bgImg { /*This is the background image displayed on the home page*/
+    background-color: rgb(81, 143, 194);
+    background-image: url(images/image.jpg); 
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #fff;
+} 
+
+.homeHeader { /*Heading on top of Background Image on the Home Page. This displays the text "Local Business Solutions*/
     color: white;
     font-weight: 600;
     font-size: 48px;
@@ -9,9 +57,9 @@
     position: relative;
 }
 
-.helpButton{
-    width: 198px;
-    height: 53px;
+.helpButton{ /*This is the Find Help button on the Home page that links to the registration page*/
+    width: 200px;
+    height: 60px;
     background: #FFFFFF;
     border-radius: 2px;
     font-weight: 400;
@@ -25,54 +73,22 @@
     position: relative;
 }
 
-.homeImageText {
+.homeImageText { /*This is the container for the homeHeader and helpButton*/
     margin: 10px 832px 93px 29px;
     padding: 15px 15px 30px 15px;
 }
 
-nav { 
-    overflow: hidden;
-    background-color: white;
-    width: 100%;
-}
-
-nav a {
-    color:black;
-}
-
-nav a:hover{
-    background-color:rgb(235, 231, 231);
-}
-.topnav {
-    overflow: hidden;
-  }
-  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-  }
-  
-  .topnav a:hover {
-    background-color:rgb(255, 255, 255);
-    color: black;
-  }
-
-  .logo {
+.logo { /*This is the logo displayed on the Home Page*/
     width: 243px;
     height: 116px;
   }
 
-.topContainer a{  
-    float: right; 
-    margin-right: 1.5%;
-    padding: 14px 16px;
-    text-decoration:none;
-    font-size: 20px;
-} 
+.bigContainer { /*This is the container that encompasses all 9 cards on the Home page*/
+    display: flex;
+    justify-content: center;
+}
 
-.cardContainer { /*The container that holds all 9 cards on the Home page*/
+.cardContainer { /*The container for each individual 9 cards on the Home page*/
     box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1), 5px -5px 14px rgba(0, 0, 0, 0.1);
     width: 20%;
     margin: 10px;
@@ -81,11 +97,11 @@ nav a:hover{
     border-bottom-color:rgba(37, 71, 254, 0.31);
 }
 
-.innerCard { /*The inner container that encompasses each individual card*/
+.innerCard { /*The inner container that encompasses the inside of each individual card*/
     padding: 20px 50px;
 }
 
-.innerCard p {
+.innerCard p { /*For the text inside each care*/
     color: #00189B;
     font-weight: 400;
     font-size: 18px;
@@ -93,22 +109,17 @@ nav a:hover{
     text-align: left;
 }
 
-.innerCard h3 {
+.innerCard h3 { /*For the title of each card*/
     font-weight: 600;
     font-size: 22px;
     line-height: 97.5%;
-}
-
-.bigContainer { /* */
-    display: flex;
-    justify-content: center;
 }
 
 .text { /* */
     padding: 60px 40px;
 }
 
-.center { /* */
+.center { /*For the title and text displayed under the image on the Home Page*/
     text-align: center;
     vertical-align: top;
     padding: 20px 20px 50px 20px;
@@ -116,23 +127,28 @@ nav a:hover{
     margin-right: 18%;
 }
 
-.bgImg { 
-    background-color: rgb(81, 143, 194);
-    background-image: url(images/image.jpg); 
-    min-height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: multiply;
-    color: #fff;
-} 
+.reviewText h3 { /*The title displayed before the review cards*/
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 97.5%;
+    text-align: center;
+    color: #000000;
+}
 
-.reviewCards {
+.reviewText h2 { /*The text displayed before the review cards*/
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 97.5%;
+    text-align: center;
+    color: #00189B;
+}
+
+.reviewCards { /*This is the container for all of the 3 review cards*/
     display: flex;
     justify-content: center;
 }
 
-.indvReviewCard {
+.indvReviewCard { /*This is the container for each individual review card*/
     width: 321px;
     height: 550px;
     box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1), 5px -5px 14px 5px rgba(0, 0, 0, 0.02);
@@ -140,7 +156,11 @@ nav a:hover{
     text-align: center;
 }
 
-.indvReviewCard h2 {
+.indvReviewCard img { /*The image of a left open quotation mark*/
+    margin: 22px 226px 0px 20px;
+}
+
+.indvReviewCard h2 { /*The title of the review card*/
     font-weight: 600;
     font-size: 32px;
     line-height: 97.5%;
@@ -150,7 +170,7 @@ nav a:hover{
     margin: 122px 20px 0px 26px;
 }
 
-.indvReviewCard p {
+.indvReviewCard p {/*The text inside of the review card*/
     font-weight: 400;
     font-size: 20px;
     line-height: 97.5%;
@@ -158,24 +178,11 @@ nav a:hover{
     position:static;
 }
 
-.indvReviewCard img {
-    margin: 22px 226px 0px 20px;
-}
-
-.reviewText h2 {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 97.5%;
-    text-align: center;
-    color: #00189B;
-}
-
-.reviewText h3 {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 97.5%;
-    text-align: center;
-    color: #000000;
+.pageLogo {
+    width: auto;
+    height: 80px;
+    margin: .5%;
+    position:absolute;
 }
 
 /* ************************************/ 
@@ -184,6 +191,7 @@ nav a:hover{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 60%;
     margin: 10px;
+    margin-top: 40px;
     text-align: left;
 }
 
