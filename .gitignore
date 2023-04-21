@@ -3,3 +3,6 @@
 
 # ignore all files in directories named 'temp'
 temp/
+
+# ignore OS generated files
+**/.DS_Store
