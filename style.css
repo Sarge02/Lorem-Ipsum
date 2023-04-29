@@ -1,213 +1,200 @@
-/* Megan ^-^ */
-/* */
+/* Sameer Contact Page & Applies to About Us and Register*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
 
-nav { /*This is the navigation for all pages except the home page. It has a white background.*/
+.topContainer {
+    background-color:  #052534;
     overflow: hidden;
-    background-color: white;
-    width: 100%;
-}
-
-nav a { /* */
-    color:black;
-}
-
-nav a:hover{ /* */
-    background-color:rgb(235, 231, 231);
-}
-
-.topnav { /*This is the navigation for the homepage. Unlike the other pages, the nav has no background.*/
-    overflow: hidden;
-}
+    height: 100px;
+  }
   
-.topnav a { /* */
+  /* Style the links inside the navigation bar */
+  .topContainer a {
+    float: right;
     color: #f2f2f2;
-    padding: 14px 16px;
-}
-  
-.topnav a:hover { /* */
-    background-color:rgb(255, 255, 255);
-    color: black;
-}
-
-.topContainer a{ /*Container for the navigation*/
-    float: right; 
-    margin-right: 1.5%;
-    padding: 14px 16px;
-    text-decoration:none;
-    font-size: 20px;
-} 
-
-.bgImg { /*This is the background image displayed on the home page*/
-    background-color: rgb(81, 143, 194);
-    background-image: url(images/image.jpg); 
-    min-height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: multiply;
-    color: #fff;
-} 
-
-.homeHeader { /*Heading on top of Background Image on the Home Page. This displays the text "Local Business Solutions*/
-    color: white;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 97.5%;
-    padding: 15px 15px 30px 15px;
-    position: relative;
-}
-
-.helpButton{ /*This is the Find Help button on the Home page that links to the registration page*/
-    width: 200px;
-    height: 60px;
-    background: #FFFFFF;
-    border-radius: 2px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 97.5%;
     text-align: center;
-    color: #00189B;
-    border-radius: 12px;
-    padding: 15px 15px 30px 15px;
-    margin-left: 60px;
-    position: relative;
-}
-
-.homeImageText { /*This is the container for the homeHeader and helpButton*/
-    margin: 10px 832px 93px 29px;
-    padding: 15px 15px 30px 15px;
-}
-
-.logo { /*This is the logo displayed on the Home Page*/
-    width: 243px;
-    height: 116px;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px; 
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 1.5%;
+  }
+  
+  /* Change the color of links on hover */
+  .topContainer a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topContainer a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
-.bigContainer { /*This is the container that encompasses all 9 cards on the Home page*/
-    display: flex;
-    justify-content: center;
+  .container {
+    margin-bottom: 5.5%;
+  }
+
+/**********************************************************/
+/* Christian About Us Page*/
+
+.text{  
+font-family: 'Federo';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 97.5%;
+text-align: center;
+left: 447px;
+top: 203px;
+color: #00189B;
+padding: 0px 30% 50px 30%;
 }
 
-.cardContainer { /*The container for each individual 9 cards on the Home page*/
-    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1), 5px -5px 14px rgba(0, 0, 0, 0.1);
-    width: 20%;
-    margin: 10px;
-    text-align: center;
-    border-bottom: solid;
-    border-bottom-color:rgba(37, 71, 254, 0.31);
+.heading{
+font-family: 'Halant';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 97.5%;
+/* or 31px */
+text-align: center;
+margin-top: 25px;
+margin-bottom: 25px;
+color: #000000;
 }
 
-.innerCard { /*The inner container that encompasses the inside of each individual card*/
-    padding: 20px 50px;
+.heading h4 {
+  margin-top: 25px;
 }
 
-.innerCard p { /*For the text inside each care*/
-    color: #00189B;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 97.5%;
-    text-align: left;
+.about-us {
+  display: flex;
+  align-items: center;
+  width: 85% ;
+  margin: auto;
 }
 
-.innerCard h3 { /*For the title of each card*/
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 97.5%;
+.about-us img {
+  flex: 0 50%;
+  max-width: 50%;
+  height: auto;
 }
 
-.text { /* */
-    padding: 60px 40px;
+.content{
+  padding: 35px;
+  margin-bottom: 25px;
 }
 
-.center { /*For the title and text displayed under the image on the Home Page*/
-    text-align: center;
-    vertical-align: top;
-    padding: 20px 20px 50px 20px;
-    margin-left: 18%;
-    margin-right: 18%;
+.content h2{
+  font: size 24px;
+  margin: 15px 0px;
 }
 
-.reviewText h3 { /*The title displayed before the review cards*/
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 97.5%;
-    text-align: center;
-    color: #000000;
+.content p
+{
+  color: rgb(64, 64, 64);
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 15px 0px;
 }
 
-.reviewText h2 { /*The text displayed before the review cards*/
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 97.5%;
-    text-align: center;
-    color: #00189B;
+.contact-button{
+  display: inline-block;
+  color:#fff;
+  background-color: #0084ff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s ease; 
 }
 
-.reviewCards { /*This is the container for all of the 3 review cards*/
-    display: flex;
-    justify-content: center;
+.contact-button:hover{
+  background-color: #006dd6;
 }
 
-.indvReviewCard { /*This is the container for each individual review card*/
-    width: 321px;
-    height: 550px;
-    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1), 5px -5px 14px 5px rgba(0, 0, 0, 0.02);
-    margin: 10px;
-    text-align: center;
+@media(max-width: 768px) {
+  .about-us {
+      flex-direction: column;
+  }
+  .about-us img {
+      flex: 0 100%;
+      max-width: 100%;
+  }
 }
 
-.indvReviewCard img { /*The image of a left open quotation mark*/
-    margin: 22px 226px 0px 20px;
+.abImg {
+  background-image: url(images/about-construction.jpeg);
+  min-height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.indvReviewCard h2 { /*The title of the review card*/
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 97.5%;
-    text-align: center;
-    color: #000000;
-    height: 40%;
-    margin: 122px 20px 0px 26px;
-}
-
-.indvReviewCard p {/*The text inside of the review card*/
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 97.5%;
-    color: #00189B;
-    position:static;
+.Image{
+  float: left;
+  min-height: 80px;
+  width: auto;
+  position: absolute;
 }
 
 .pageLogo {
-    width: auto;
-    height: 80px;
-    margin: .5%;
-    position:absolute;
+  float: left;
+  width: auto;
+  height: 80px;
+  margin: .5%;
+  position: absolute;
 }
 
 /* ************************************/ 
 /* Ryan css changes */
 .registrationContainer {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    width: 60%;
-    margin: 10px;
-    margin-top: 40px;
-    text-align: left;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 60%;
+  margin: 10px;
+  margin-top: 40px;
+  text-align: left;
 }
 
 .registrationInnerCard {
-    padding: 20px 50px;
+  padding: 20px 50px;
 }
 
 .h2 {
-    padding: 20px 20px;
+  padding: 20px 20px;
 }
 
 .loginContainer {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    width: 50%;
-    margin: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 50%;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
+
+/***********Raf Footer***********/
+.footer-wrap .footerTabs a { font-size: 14px;font-weight: 300; }
+.footer-wrap .footerTabs a,.footer-wrap .footerLinks-actions a, .poweredby, .poweredby a { color: #fff; line-height: 2; }
+.footer-wrap .footerLinks-actions { margin-top: 37px;margin-left:315px }
+.footer-wrap .footerLinks-actions a, .poweredby, .poweredby a { font-size: 12px;margin-left:20px }
+.footer-wrap .about { color:white;margin-top: 0px;font-size: 12px;margin-left:-95px }
+.footer-wrap { background:#052534;padding-top:38px;padding-bottom:35px;padding-right:80px }
+.site-footer { color:white; }
+.footer-wrap .footerTabs a:hover, .footer-wrap .footerLinks-actions a:hover, .poweredby, .poweredby a:hover { color:#deff5b; }
+
