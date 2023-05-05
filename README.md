@@ -1,4 +1,4 @@
-<a name="readme"></a>
+# Project Titan Finder by Team Lorem Ipsum
 
 <!-- PROJECT SHIELDS -->
 <!--ReadMe Template Credit: https://github.com/othneildrew/Best-README-Template/blob/master/README.md
@@ -56,7 +56,7 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
+<br />
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -102,6 +102,7 @@
 
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
+<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
 
 <!-- Dev Instructions -->
 ## Developer Instructions
@@ -109,9 +110,7 @@
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-<!-- ### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them. -->
+<!-- ### Prerequisites This is an example of how to list things you need to use the software and how to install them. -->
 
 
 ### Installation
@@ -120,11 +119,14 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/Sarge02/Lorem-Ipsum.git
    ```
+<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
 
 <!-- Deployment -->
 ## Deployment
 
 Instructions to be added in CSC 191 with the progression of this project.
+
+<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
 
 <!-- Jira Timeline/Milestone -->
 ## Timeline
@@ -135,19 +137,22 @@ This is the general timeline of when tasks will be started. Ideally each task wi
 -  Sprint 7:Messaging center
 -  Sprint 8: Matching algorithm
 
+<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
+
 <!-- CONTACT -->
 ## Contact
   Developers: Megan Gross, Ryan Sarginson, Sameer Shaik, Christian Villagran, Rafael Mercado, Daniel Mason, Covi Singh, Illia Pashkovich
 
 Project Link: [https://github.com/Sarge02/Lorem-Ipsum](https://github.com/Sarge02/Lorem-Ipsum)
 
+<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
 * []() California State University, Sacramento | Engineering and Computer Science Department
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
