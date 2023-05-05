@@ -69,28 +69,21 @@
 <p>&nbsp &nbsp Unlike traditional job boards where employers post in search of employees and vice versa, Titan Finder will act as a middleman. Employers will come to the website and request a skilled tradesman or even an entry-level laborer. Titan Finder will then provide the employer with an employee that fits their needs. </p>
 
 <div align="center">
-   --------------------------Entity Relations Diagram (ERD)--------------------------
+   --------------------------Entity Relations Diagram (ERD)--------------------------<br />
+  <img src="readMeImages/erd.png" alt="Entity Relations Diagram (ERD)"><br /><br />
   <br />
-  <img src="readMeImages/erd.png" alt="Entity Relations Diagram (ERD)" width="500" height="300"><br /><br />
-  <br />
-    --------------------------Prototype for the Home page--------------------------
-    <br />
-  <img src="readMeImages/homePrototype.png" alt="Prototype for the Home page" width="450" height="800"><br /><br />
-  --------------------------Prototype for the Registration page--------------------------
-  <br />
-    <img src="readMeImages/registerPrototype.png" alt="Prototype for the Registration page" width="1000" height="600"><br /><br />
-    --------------------------Prototype for the Login page--------------------------
-    <br />
-    <img src="readMeImages/loginPrototype.png" alt="Prototype for the Login page" width="1000" height="600"><br /><br />
-    --------------------------Prototype for the independent contractor's dashboard page--------------------------
-    <br />
-    <img src="readMeImages/workersPrototype.png" alt="Prototype for the independent contractor's dashboard page" width="1000" height="600"><br /><br />
-    --------------------------Prototype for the companies dashboard page--------------------------
-    <br />
-    <img src="readMeImages/clientPrototype.png" alt="Prototype for the companies dashboard page" width="1000" height="600"><br /><br />
-    --------------------------Prototype for the admin dashboard page--------------------------
-    <br />
-    <img src="readMeImages/adminPrototype.png" alt="Prototype for the admin dashboard page" width="1000" height="600"><br /><br />
+    --------------------------Prototype for the Home page-------------------------- <br />
+  <img src="readMeImages/homePrototype.png" alt="Prototype for the Home page"><br /><br />
+  --------------------------Prototype for the Registration page--------------------------<br />
+    <img src="readMeImages/registerPrototype.png" alt="Prototype for the Registration page"><br /><br />
+    --------------------------Prototype for the Login page-------------------------- <br />
+    <img src="readMeImages/loginPrototype.png" alt="Prototype for the Login page"><br /><br />
+    --------------------------Prototype for the independent contractor's dashboard page--------------------------<br />
+    <img src="readMeImages/workersPrototype.png" alt="Prototype for the independent contractor's dashboard page"><br /><br />
+    --------------------------Prototype for the companies dashboard page--------------------------<br />
+    <img src="readMeImages/clientPrototype.png" alt="Prototype for the companies dashboard page"><br /><br />
+    --------------------------Prototype for the admin dashboard page--------------------------<br />
+    <img src="readMeImages/adminPrototype.png" alt="Prototype for the admin dashboard page"><br /><br />
   </div>
 </div>
 
