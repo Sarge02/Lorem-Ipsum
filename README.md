@@ -15,7 +15,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Sarge02/Lorem-Ipsum">
-    <img src="images/titanLogoTemp.png" alt="Logo" width="400" height="200">
+    <img src="images/logo.png" alt="Logo" width="400" height="200">
   </a>
 
 <h3 align="center">Titan Finder</h3>
