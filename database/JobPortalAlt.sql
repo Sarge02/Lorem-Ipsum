@@ -3,7 +3,19 @@
 --
 
 -- --------------------------------------------------------
+-- Table structure for table 'User_Account'
+DROP TABLE IF EXISTS 'User_Account';
+CREATE TABLE IF NOT EXISTS 'User_Account' (
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+  'fname' varchar(225) NOT NULL,
+  'lname' varchar(225) NOT NULL,
+  'email' varchar(225) NOT NULL,
+  'phone' varchar(20) NOT NULL,
+  'company' varchar(225) NOT NULL,
+  'website' varchar(225) NOT NULL
+) 
 
+-- --------------------------------------------------------
 --
 -- Table structure for table 'admin'
 --
