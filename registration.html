@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Register | Titan Finder </title>
+        <meta name="description" content="Login page for Website">
+        <link rel="stylesheet" href="style.css">
+        <link href="login+\bootstrap3.css" rel="stylesheet" type="text/css">
+
+        <div class="topContainer">
+            <div class="Image">
+                <a href="home.html">
+                    <img class="pageLogo" src="images/titanLogoTemp.png"> 
+                </a>
+            </div>
+            <nav> 
+                <a href="contact.html">Contact</a> 
+                <a href="login+\login.html">Login</a>
+                <a href="about.html">About Us</a>    
+                <a href="home.html">Home</a> 
+            </nav>     
+        </div>
+    </head>
+    
+    <body>
+        <div class="registrationContainer">
+            <div class ="registrationInnerCard">
+                <form id = "reg">
+                    <h2>Contact Information</h2>
+                    <label for="fname">First Name:</label>
+                    <input type="fname" id = "fname" name = "fname" required>
+                    <p id="fnameError" style="color:black;"></p>
+
+                    <label for="lname">Last Name:</label>
+                    <input type="lname" id = "lname" name = "lname" required>
+                    <p id="lnameError" style="color:black;"></p>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <p id="emailError" style="color: rgb(56, 146, 143);"></p><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id = "password" name = "password" required>
+                    <p id="passwordError" style="color:black;"></p>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="text"><br>
+
+                    <label for="company">Company:</label>
+                    <input type="text"><br>
+
+                    <label for="website">Website:</label>
+                    <input type="text"><br>
+
+
+                    
+                    <label for="countryCode">Country Code:</label>
+                    <select id="countryCode" name="countryCode">
+                        <option value="countryOne">One</option>
+                        <option value="countryTwo">Two</option>
+                        <option value="countryThree">Three</option>
+                        <option value="countryFour">Four</option>
+                    </select><br>
+
+                    <label for="stateCode">State/Province Code:</label>
+                    <select id="stateCode" name="stateCode">
+                        <option value="stateOne">One</option>
+                        <option value="stateTwo">Two</option>
+                        <option value="stateThree">Three</option>
+                        <option value="stateFour">Four</option>
+                    </select><br><br>
+
+                    <h2>Registration Information</h2>
+                    <label for="registrationType">Registration Type:</label>
+                    <select id="regType" name="regType">
+                        <option value="regTypeOne">One</option>
+                        <option value="regTypeTwo">Two</option>
+                        <option value="regTypeThree">Three</option>
+                        <option value="regTypeFour">Four</option>
+                    </select><br>
+                    
+                    <label for="description">Description:</label>
+                    <input type="text">
+                    <br><br>
+
+                    <input type="submit" value="Submit"><br>
+                    <a href="login+\login.html">Already have an account?</a>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-wrap">
+            <div class="content-width">
+                <div class="container-fluid">
+                    <div class="row center">
+                        <div class="col-md-3">
+                            <div class="footer-logo left">
+                                <a href="https://titan307.com/team/">
+                                    <img src="images/TitanLogo4Real.png" itemprop="logo" alt="Logo" style="width:auto; background-image:none;" ></img>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6"><div class="link">
+                            <div class="site-footer">
+                                <div class="footerLinks-actions">
+                                    <div class="about">
+                                        <span>
+                                            <a href="/home/privacy" class="sitefooter-link-item" rel="nofollow" target="_top">Privacy &amp; Security Statement</a>
+                                            <a href="/home/terms" class="sitefooter-link-item" rel="nofollow" target="_top">Terms &amp; Conditions</a>
+                                        </span>
+                                    </div>
+                                        <a href="about.html" class="sitefooter-link-item" rel="nofollow" target="_top">About our service</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-3"><div></div>
+        <script type="text/javascript"></script>
+    </body>
+    <script>
+        document.getElementById("reg").addEventListener("submit", function(event) {
+            var fname = document.getElementByID("fname").value;
+            var lname = document.getElementByID("lname").value;
+            var email = document.getElementByID("email").value;
+            var phone = document.getElementByID("phone").value;
+            var company = document.getElementByID("company").value;
+            var website = document.getElementByID("website").value;
+        })
+
+        //fname criteria
+        document.getElementById("fname").addEventListener("input", function() {
+            var name = document.getElementById("fname").value;
+            var nameError = document.getElementById("fnameError");
+            if (name.length < 3) {
+                nameError.textContent = "Name must be at least 3 characters.";
+            } 
+            else {
+                nameError.textContent = "";
+            }
+        });
+
+        //lname criteria
+        document.getElementById("lname").addEventListener("input", function() {
+            var name = document.getElementById("lname").value;
+            var nameError = document.getElementById("lnameError");
+            if (name.length < 3) {
+                nameError.textContent = "Name must be at least 3 characters.";
+            } 
+            else {
+                nameError.textContent = "";
+            }
+        });
+        
+        //email criteria
+        document.getElementById("email").addEventListener("input", function() {
+            var email = document.getElementById("email").value;
+            var emailError = document.getElementById("emailError");
+            if (!isValidEmail(email)) {
+                emailError.textContent = "Invalid email address.";
+            } else {
+                emailError.textContent = "";
+            }
+        });
+
+        //password criteria
+        function isValidEmail(email) {
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        
+        }
+    </script>
+</html>
+
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        //connect to the db
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "profiles";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $fname = $_POST["name"];
+        $lname = $_POST["lname"]
+        $email = $_POST["email"];
+        $checkSql = "SELECT * FROM users WHERE email = '$email'";
+        $result = $conn->query($checkSql);
+        if ($result->num_rows > 0) {
+            echo "Error: This email is already registered.";
+        } 
+        else {
+            $insertSql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
+            if ($conn->query($insertSql) === TRUE) {
+                echo "Registration successful!";
+            } else {
+                echo "Error: " . $insertSql . "<br>" . $conn->error;
+            }
+        }
+        $password = $_POST["password"];
+        $phone = $_POST["phone"];
+        $company = $_POST["company"]
+        $website = $_POST["website"];
+
+        //post input into the 'users' table
+        $sql = "INSERT INTO users (fname, lname, email, password, phone, company, website) VALUES ('$fname', '$lname', '$email', '$password', '$phone', '$company', '$website')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Registration successful!";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $conn->close();
+    }
+    //$sql = $conn->prepare("INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
+    //$sql->bind_param("sssssi", $name, $email, $password);
+    //$sql->execute();
+?>
