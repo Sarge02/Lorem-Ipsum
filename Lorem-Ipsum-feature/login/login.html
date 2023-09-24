@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Home | Login | Titan Construction</title>
+    <link href="bootstrap3.css" rel="stylesheet" type="text/css">
+    <link href="site.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="contentWrapper">
+        <div class="sitePage">
+            <div class="site-page-navigation-container">
+                <a href="../home.html" class="site-logo-img navbar-inline-logo">
+                    <img src="../images/Home.png" itemprop="logo" alt="Logo" style="width:auto; background-image:none;">
+                </a>
+            </div>
+            <div class="siteBodyContainer">
+                <div class="siteBody">
+                    <div class="home-page-login-container">
+                        <div class="login-container">
+                            <div id="loginPanel" class="container-fluid public-panel">
+                                <div class="max400 panel panel-default content rounded block-box-shadow">
+                                    <div class="panel-body">
+                                        <h1 class="h2 nomargin heading-responsive login-title">Login</h1><br>
+                                        <form method="post" action="login.php" id="form1">
+                                            <div class="form-group">
+                                                <input class="input-text form-control input-lg username-input" id="UserName" name="email" placeholder="Email" tabindex="1" type="text" value="">
+                                                <input autocomplete="off" class="password input-text form-control input-lg password-input" id="Password" name="password" onkeypress="keyTrigger(event,function(){ $('.btnLogin').click(); })" placeholder="Password" tabindex="2" type="password">
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-lg btnOrange btn-block btnLogin" tabindex="3">Login</button>
+                                            </div>
+                                        </form>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-xs-6 nopadding">
+                                                    <div class="checkbox nomargin">
+                                                        <label>
+                                                            <input type="checkbox" data-role="none" name="RememberMe" tabindex="4"> Remember Me
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 right nopadding">
+                                                    <a class="forgot-pw-link actionLink" href="/user/forgotpassword" tabindex="5">Forgot your password</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="horizontalLine" style="margin-bottom:30px;"></div>
+                                        <div class="signupBox">
+                                            <h4>New User?</h4>
+                                            <div style="margin-top:10px;">
+                                                <a class="btn btn-primary btn-lg btnOrange btn-block btnLogin" data-theme="b" href="../register/registration.html" tabindex="6">Sign Up</a>
+                                            </div>
+                                        </div>
+                                        <hr class="login-line-sep" data-title="OR">
+                                        <div class="external-login-item">
+                                            <a href="../register/registration.html" style="margin-right:6px;" class="btn btn-default btn-lg btnOrange btn-block btnLogin">
+                                                <i class="glyphicon glyphicon-lock"></i> Register as a contractor
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-wrap">
+        <div class="content-width">
+            <div class="container-fluid">
+                <div class="row center">
+                    <div class="col-md-3">
+                        <div class="footer-logo left">
+                            <a href="https://titan307.com/team/">
+                                <img src="../images/TitanLogo4Real.png" itemprop="logo" alt="Logo" style="width:auto; background-image:none;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="link">
+                            <div class="site-footer">
+                                <div class="footerLinks-actions">
+                                    <div class="about">
+                                        <span>
+                                            <a href="/home/privacy" class="sitefooter-link-item" rel="nofollow" target="_top">Privacy & Security Statement</a>
+                                            <a href="/home/terms" class="sitefooter-link-item" rel="nofollow" target="_top">Terms & Conditions</a>
+                                        </span>
+                                    </div>
+                                    <a href="../about.html" class="sitefooter-link-item" rel="nofollow" target="_top">About our service</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
