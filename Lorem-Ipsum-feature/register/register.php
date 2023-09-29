@@ -5,13 +5,13 @@
     $dbpassword = "";
     $dbname = "user_accounts";
 	
-	$fname = $_POST["fname"];
-    $lname = $_POST["lname"];
-    $email = $_POST["email"];
-	$password = $_POST["password"];
-    $phone = $_POST["phone"];
-    $company = $_POST["company"];
-    $website = $_POST["website"];
+	$fname = $_POST["FirstName"];
+    $lname = $_POST["LastName"];
+    $email = $_POST["Email"];
+	$password = $_POST["Password"];
+    $phone = $_POST["Phone"];
+    $company = $_POST["Company"];
+    $website = $_POST["Website"];
 
     $conn = new mysqli($servername, $username, $dbpassword, $dbname);
 	

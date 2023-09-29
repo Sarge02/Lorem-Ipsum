@@ -187,13 +187,24 @@ color: #000000;
   margin-top: 91px;
 }
 
-/***********Raf Footer***********/
+.panel-default {
+  width: 100%;
+  max-width: 550px; 
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+
+
+.content-width { max-width:1430px;margin:0 auto;position:relative; }
+.sitePage { background-color:#2244ee !important; }
+
+/***********Footer***********/
 .footer-wrap .footerTabs a { font-size: 14px;font-weight: 300; }
 .footer-wrap .footerTabs a,.footer-wrap .footerLinks-actions a, .poweredby, .poweredby a { color: #fff; line-height: 2; }
-.footer-wrap .footerLinks-actions { margin-top: 30px;margin-left:400px }
+.footer-wrap .footerLinks-actions { margin-top: 37px;margin-left:315px }
 .footer-wrap .footerLinks-actions a, .poweredby, .poweredby a { font-size: 12px;margin-left:20px }
-.footer-wrap .about { color:white;margin-top: 20px;font-size: 12px;margin-left:-95px }
-.footer-wrap { background:#052534;padding-top:65px;padding-bottom:65px;padding-right:80px }
+.footer-wrap .about { color:white;margin-top: 0px;font-size: 12px;margin-left:-95px }
+.footer-wrap { background:#052534;padding-top:38px;padding-bottom:35px;padding-right:80px }
 .site-footer { color:white; }
 .footer-wrap .footerTabs a:hover, .footer-wrap .footerLinks-actions a:hover, .poweredby, .poweredby a:hover { color:#deff5b; }
-.footer-logo {}

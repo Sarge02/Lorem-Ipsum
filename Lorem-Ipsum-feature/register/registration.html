@@ -1,153 +1,148 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Register | Titan Finder </title>
-        <meta name="description" content="Login page for Website">
-        <link rel="stylesheet" href="style.css">
-        <link href="bootstrap3.css" rel="stylesheet" type="text/css">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Register | Titan Finder </title>
+    <meta name="description" content="Login page for Website">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap3.css" rel="stylesheet" type="text/css">
 
-        <div class="topContainer">
-            <div class="Image">
-                <a href="..\home.html">
-                    <img class="pageLogo" src="..\images/titanLogoTemp.png"> 
-                </a>
-            </div>
-			<div class="links">
-				<nav> 
-					<a href="..\forms\contact.html">Contact</a> 
-					<a href="..\login\login.html">Login</a>
-					<a href="..\forms\about.html">About Us</a>    
-					<a href="..\home.html">Home</a> 
-				</nav>     
+    <div class="topContainer">
+        <div class="Image">
+            <a href="..\home.html">
+                <img class="pageLogo" src="..\images/titanLogoTemp.png"> 
+            </a>
+        </div>
+		<div class="links">
+			<nav> 
+				<a href="..\forms\contact.html">Contact</a> 
+				<a href="..\login\login.html">Login</a>
+				<a href="..\forms\about.html">About Us</a>    
+				<a href="..\home.html">Home</a> 
+			</nav>     
+		</div>
+    </div>
+</head>
+
+<body id="html_body" data-lbl-working="Working..." class="default"><form method="post" action="register.php" id="form1" novalidate="novalidate">
+	<div class="contentWrapper">
+		<div class="sitePage">
+			<div class="siteBodyContainer">
+				<div class="siteBody">
+					<div data-valmsg-summary="true" class="validation-summary-valid container-fluid"><ul></ul></div>
+					<div class="max800">
+						<div class="panel panel-default">
+							<div class="panel-heading"><h3>Registration</h3></div><br>
+							<div id="body_new_partner_register_page_Contact_Information" class="section-item-1">
+								<div class="sectionHeader">
+									<a name="Contact_Information"></a><span>Contact Information</span>
+								</div>
+						
+						
+								<div id="body_new_partner_register_page_Contact_Information_body" class="sectionBody container-fluid form-horizontal ">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group form-group-0"><label for="FirstName" class="col-md-2 col-sm-3 control-label">First Name<span class="lblRequired">*</span></label>
+												<div class="col-sm-10">
+													<input class="input-required input-text form-control" data-val="true" data-val-length="Error: The field first name must be a string with a maximum length of 40." data-val-length-max="40" data-val-required="Error: You must enter a value for 'First Name'." id="FirstName" maxlength="40" name="FirstName" placeholder="Required" tabindex="1" type="text"><span class="field-validation-valid errorMsg" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+												</div>
+											</div>
+											<div class="form-group form-group-1"><label for="LastName" class="col-md-2 col-sm-3 control-label">Last Name<span class="lblRequired">*</span></label>
+												<div class="col-sm-10">
+													<input class="input-required input-text form-control" data-val="true" data-val-length="Error: The field last name must be a string with a maximum length of 80." data-val-length-max="80" data-val-required="Error: You must enter a value for 'Last Name'." id="LastName" maxlength="80" name="LastName" placeholder="Required" tabindex="2" type="text"><span class="field-validation-valid errorMsg" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+												</div>
+											</div>
+											<div class="form-group form-group-2"><label for="Email" class="col-md-2 col-sm-3 control-label">Email<span class="lblRequired">*</span></label>
+												<div class="col-sm-10">
+													<input class="input-required input-text form-control" data-val="true" data-val-email="Error: Invalid email address" data-val-required="Error: You must enter a value for 'Email'." id="Email" name="Email" placeholder="Required" tabindex="3" type="email"><span class="field-validation-valid errorMsg" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+												</div>
+											</div>
+											<div class="form-group form-group-3"><label for="Password" class="col-md-2 col-sm-3 control-label">Password<span class="lblRequired">*</span></label>
+												<div class="col-sm-10">
+													<input autocomplete="off" class="password input-text form-control password-input" id="Password" name="Password" placeholder="Required" tabindex="3" type="password"><span class="field-validation-valid errorMsg" data-valmsg-for="Passowrd" data-valmsg-replace="true"></span>
+												</div>
+											</div>
+											<div class="form-group form-group-4"><label for="Phone" class="col-md-2 col-sm-3 control-label">Phone<span>*</span></label>
+												<div class="col-sm-10">
+													<input class="input-required input-text form-control" data-val="true" data-val-required="Error: You must enter a value for 'Phone'." id="Phone" name="Phone" placeholder="Required" tabindex="4" type="tel"><span class="field-validation-valid errorMsg" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+												</div>
+											</div>
+											<div class="form-group form-group-5"><label for="Company" class="col-md-2 col-sm-3 control-label">Company<span class="lblRequired">*</span></label>
+												<div class="col-sm-10">
+													<input class="input-required input-text form-control" data-val="true" data-val-length="Error: The field company must be a string with a maximum length of 255." data-val-length-max="255" data-val-required="Error: You must enter a value for 'Company'." id="Company" maxlength="255" name="Company" placeholder="Required" tabindex="5" type="text"><span class="field-validation-valid errorMsg" data-valmsg-for="Company" data-valmsg-replace="true"></span>
+												</div>
+											</div>
+											<div class="form-group form-group-6"><label for="Website" class="col-md-2 col-sm-3 control-label">Website<span class="lblRequired">*</span></label>
+												<div class="col-sm-10">
+													<input class="input-required input-text form-control" data-val="true" data-val-required="Error: You must enter a value for 'Website'." data-val-url="Error: Please enter a valid Website." id="Website" name="Website" placeholder="Required" tabindex="6" type="url"><span class="field-validation-valid errorMsg" data-valmsg-for="Website" data-valmsg-replace="true"></span>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="body_new_partner_register_page_Registration_Information" class="section-item-2 section">
+								<div class="sectionHeader"><a name="Registration_Information"></a><i class="hideBtn mag-icon mag-icon-arr-down disabled"></i><span>Registration Information</span></div>
+								<div id="body_new_partner_register_page_Registration_Information_body" class="sectionBody container-fluid form-horizontal ">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group form-group-0">
+												<label for="Registration_Type__c" class="col-md-2 col-sm-3 control-label">Registration Type<span class="lblRequired">*</span></label>
+												<div class="col-sm-10">
+													<select class="input-required form-control" data-nullable="true" data-val="true" data-val-required="Error: You must enter a value for 'Registration Type'." id="Registration_Type__c" name="Registration_Type__c" tabindex="9">
+														<option value="" selected="selected">--Select--</option>
+														<option value="Interested in becoming a Titan Construction Partner (new contractors)">Interested in becoming a Titan Construction Partner (new contractors)</option>
+														<option value="Interested in contracting Titan Construction Partners">Interested in contracting Titan Construction Partners</option>
+													</select><span class="field-validation-valid errorMsg" data-valmsg-for="Registration_Type__c" data-valmsg-replace="true"></span><br></br>
+													<input class="btn btn-primary btn-lg btnOrange btn-block btnRegister" type="submit" value="Submit">
+													<a href="..\login\login.html">Already have an account?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<div class="footer-wrap">
+					<div class="content-width">
+						<div class="container-fluid">
+							<div class="row center">
+								<div class="col-md-3">
+									<div class="footer-logo left">
+										<a href="https://titan307.com/team/">
+											<img src="../images/TitanLogo4Real.png" itemprop="logo" alt="Logo" style="width:auto; background-image:none;">
+										</a>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="link">
+										<div class="site-footer">
+											<div class="footerLinks-actions">
+												<div class="about">
+													<span>
+														<a href="/home/privacy" class="sitefooter-link-item" rel="nofollow" target="_top">Privacy & Security Statement</a>
+														<a href="/home/terms" class="sitefooter-link-item" rel="nofollow" target="_top">Terms & Conditions</a>
+													</span>
+												</div>
+												<a href="../about.html" class="sitefooter-link-item" rel="nofollow" target="_top">About our service</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-        </div>
-    </head>
-    
-    <body>
-        <div class="registrationContainer">
-            <div class ="registrationInnerCard">
-                <form id = "reg" action="register.php" method="post">
-                    <h2>Contact Information</h2>
-                    <label for="fname">First Name:</label>
-                    <input type="fname" id = "fname" name = "fname" required>
-                    <p id="fnameError" style="color:black;"></p>
+		</div>
+	</div>
+</body>
 
-                    <label for="lname">Last Name:</label>
-                    <input type="lname" id = "lname" name = "lname" required>
-                    <p id="lnameError" style="color:black;"></p>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <p id="emailError" style="color: rgb(56, 146, 143);"></p><br>
-
-                    <label for="password">Password:</label>
-                    <input type="password" id = "password" name = "password" required>
-                    <p id="passwordError" style="color:black;"></p>
-
-                    <label for="phone">Phone Number:</label>
-                    <input type="text" id="phone" name="phone"><br>
-
-                    <label for="company">Company:</label>
-                    <input type="text" id="company" name="company"><br>
-
-                    <label for="website">Website:</label>
-                    <input type="text" id="website" name="website"><br>
-
-
-                    <h2>Registration Information</h2>
-                    <label for="registrationType">Registration Type:</label>
-                    <select id="regType" name="regType">
-                        <option value="regTypeOne">Client Account</option>
-                        <option value="regTypeTwo">Employee Account</option>
-                    </select><br>
-
-                    <input type="submit" value="Submit"><br>
-                    <a href="..\login\login.html">Already have an account?</a>
-                </form>
-            </div>
-        </div>
-
-        <div class="footer-wrap">
-            <div class="content-width">
-                <div class="container-fluid">
-                    <div class="row center">
-                        <div class="col-md-3">
-                            <div class="footer-logo left">
-                                <a href="https://titan307.com/team/">
-                                    <img src="..\images/TitanLogo4Real.png" itemprop="logo" alt="Logo" style="width:auto; background-image:none;" ></img>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6"><div class="link">
-                            <div class="site-footer">
-                                <div class="footerLinks-actions">
-                                    <div class="about">
-                                        <span>
-                                            <a href="/home/privacy" class="sitefooter-link-item" rel="nofollow" target="_top">Privacy &amp; Security Statement</a>
-                                            <a href="/home/terms" class="sitefooter-link-item" rel="nofollow" target="_top">Terms &amp; Conditions</a>
-                                        </span>
-                                    </div>
-                                        <a href="about.html" class="sitefooter-link-item" rel="nofollow" target="_top">About our service</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <div class="col-md-3"><div></div>
-        <script type="text/javascript"></script>
-    </body>
-    <script>
-        document.getElementById("reg").addEventListener("submit", function(event) {
-            var fname = document.getElementByID("fname").value;
-            var lname = document.getElementByID("lname").value;
-            var email = document.getElementByID("email").value;
-            var phone = document.getElementByID("phone").value;
-            var company = document.getElementByID("company").value;
-            var website = document.getElementByID("website").value;
-        })
-
-        //fname criteria
-        document.getElementById("fname").addEventListener("input", function() {
-            var name = document.getElementById("fname").value;
-            var nameError = document.getElementById("fnameError");
-            if (name.length < 3) {
-                nameError.textContent = "Name must be at least 3 characters.";
-            } 
-            else {
-                nameError.textContent = "";
-            }
-        });
-
-        //lname criteria
-        document.getElementById("lname").addEventListener("input", function() {
-            var name = document.getElementById("lname").value;
-            var nameError = document.getElementById("lnameError");
-            if (name.length < 3) {
-                nameError.textContent = "Name must be at least 3 characters.";
-            } 
-            else {
-                nameError.textContent = "";
-            }
-        });
-        
-        //email criteria
-        document.getElementById("email").addEventListener("input", function() {
-            var email = document.getElementById("email").value;
-            var emailError = document.getElementById("emailError");
-            if (!isValidEmail(email)) {
-                emailError.textContent = "Invalid email address.";
-            } else {
-                emailError.textContent = "";
-            }
-        });
-
-        //password criteria
-        function isValidEmail(email) {
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        
-        }
-    </script>
 </html>
