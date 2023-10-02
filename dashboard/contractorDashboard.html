@@ -81,11 +81,12 @@
             </div>
           
           </header>
-        <div class="containerBig">
+        <div class="containerBig" id="containerBig">
             <div class="containerCard">
                 <div class="card">
                     <h2>My Profile</h2>
-                    <a href="">Contact Info<br></a>
+                    <button onclick="showHide()">Contact Info</button>
+                    <a href="">Update Profile</a>
                     <a href="">Update Profile</a>
                 </div>
                 <div class="card">
@@ -103,6 +104,14 @@
                 <a href="">Express Interest</a>
             </div>
         </div>
+
+        <div id="containerProfile">
+            <div class="innerProfile">
+              <button onclick="showHide()">X</button>
+              <h2>My Profile</h2>
+            </div>
+        </div>
+
         <script>
             let sidebar = document.querySelector(".sidebar");
             let closeBtn = document.querySelector("#btn");
@@ -119,6 +128,20 @@
                closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
              }
             }
+            </script>
+
+            <script> //Megan's test JS for dashboard
+              function showHide(){
+                var contentToShow=document.getElementById("containerProfile");
+                var contentToHide=document.getElementById("containerBig");
+                if(contentToShow.style.display == "none"){ 
+                  contentToShow.style.display="block";
+                  contentToHide.style.display="none"; 
+                }else {
+                  contentToShow.style.display="none";
+                  contentToHide.style.display="block";
+                }
+              }
             </script>
     </body>
 </html>
