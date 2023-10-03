@@ -3,6 +3,23 @@
 --
 
 -- --------------------------------------------------------
+-- Table structure for table 'Work_Request'
+DROP TABLE IF EXISTS 'Work_Request';
+CREATE TABLE IF NOT EXISTS 'Work_Request' (
+  Request_id INT AUTO_INCREMENT PRIMARY KEY,
+  'R_Fname' varchar(225) NOT NULL,
+  'R_Lname' varchar(225) NOT NULL,
+  'R_Email' varchar(225) NOT NULL,
+  'R_Phone' varchar(20) NOT NULL,
+  'R_Company' varchar(225) NOT NULL,
+  'R_website' varchar(225) NOT NULL,
+ 'JobDiscription' TEXT,
+CountryCode ENUM('one','two','three','four') NOT NULL,
+StateCode ENUM('one','two','three','four') NOT NULL,
+RegistrationType ENUM('one','two','three','four') NOT NULL
+) 
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table 'admin'
