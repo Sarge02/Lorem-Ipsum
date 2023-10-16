@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title> Dashboard | Titan Finder </title>
         <meta name="description" content="Contractor Dashboard">
-        <link rel="stylesheet" href="conDash.css">
-        <link rel="stylesheet" href="clientDash.css">
+      <!--  <link rel="stylesheet" href="conDash.css"> -->
+     <link rel="stylesheet" href="clientDash.css"> 
         <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    </head>
+      </head>
         
     <body>
         <header>
@@ -79,30 +79,12 @@
                </li>
               </ul>
             </div>
-          
           </header>
-        <div class="containerBig">
-            <div class="containerCard">
-                <div class="card">
-                    <h2>My Profile</h2>
-                    <a href="">Contact Info<br></a>
-                    <a href="">Update Profile</a>
-                </div>
-                <div class="card">
-                    <h2>Quick Search</h2>
-                    <a href="">Search Matches</a>
-                </div>
-                <div class="card">
-                    <h2>Messages</h2>
-                    <a href="">Inbox<br></a>
-                    <a href="">Send a Message</a>
-                </div>
-            </div>
-            <div class="bigBoxContractor">
-                <h2>New Jobs</h2>
-                <a href="">Express Interest</a>
-            </div>
+          
+        <div class="containerBig" id="containerBig">
+          <iframe src="dashboardInnerMain.html" title="Main" id="webpage"></iframe>
         </div>
+        
         <script>
             let sidebar = document.querySelector(".sidebar");
             let closeBtn = document.querySelector("#btn");
@@ -119,6 +101,33 @@
                closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
              }
             }
-            </script>
+
+            function changeParentIframe(source){
+              document.getElementById('webpage').src = source;
+            }
+        </script>
+
+      <script>
+        const nodeText = "janeDoe";
+        const iframe = document.getElementById('webpage');
+        iframe.src = 'dashboardInnerMain.html';
+
+        function sendNodeTextToIframe() {
+          console.log('Sending nodeText to iframe:', nodeText);
+          iframe.contentWindow.postMessage(
+            { action: 'receiveJsonFilePath', data: nodeText },
+            '*'
+           );
+        }
+
+        iframe.addEventListener('load', sendNodeTextToIframe);
+
+        window.addEventListener('message', (event) => {
+          if (event.source === iframe.contentWindow) {
+            const { action, data } = event.data;
+            if (action === 'passJsonFilePath') {}
+          }
+        }); 
+      </script>
     </body>
 </html>
