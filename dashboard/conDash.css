@@ -2,6 +2,12 @@
     margin-left: 8%;
 }
 
+iframe {
+    width: 75%;
+    height: 100%;
+    border-style: none;
+}
+
 .containerCard {
     display: flex;
     justify-content: center;
@@ -66,15 +72,4 @@
   }
   .row {margin: 0 -5px;}
 
-  /* */
-  #containerProfile {
-    display: none;
-    margin: auto;
-    margin-left: 8%;
-    width: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding: 1em 2em;
-    border: solid 1px #ccc;
-    border-radius: 6px;
-  }
 
