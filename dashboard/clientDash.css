@@ -281,6 +281,41 @@ iframe {
   padding: 10px 10px 10px 10px;
 }
 
+.innerProfile {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.profileRow{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  padding: 10px;
+}
 
+.profileRowAttribute{
+  width:75%;
+}
 
+.profileHeading{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 25px;
+  align-items: center;
+}
+
+.editProfileButton{
+  color:#1d1b31;
+  background-color: #FFF;
+  box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
+  padding:5px;
+  border: solid 1px #ccc;
+  border-radius: 6px;
+}
+
+.editProfileButton:hover{
+  background-color: rgb(226, 225, 225);
+  border: solid 1.5px;
+}

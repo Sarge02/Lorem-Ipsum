@@ -3,12 +3,12 @@
         "Name": "Jane Doe",
         "Job Title": "Dirt Monkey"
     },
-    "Contact Info": {
+    "Contact": {
         "Phone": "123123123",
         "Email": "meboyo@gmail.com"
     },
     "Description": {
-        "Work Experience": [
+        "Experience": [
             "Here",
             "There",
             "Everywhere"

@@ -10,8 +10,17 @@
         <script type="text/javascript" src="script.js"></script>
     </head>   
         <div class="bigBoxContractor profile">
-            <a href="dashboardInnerMain.html" onclick="changeParentToIframe('dashboard/dashboardInnerMain.html')">X</a>
-            <h2 id="profileName">User</h2>
+            <div class="profileHeading"> 
+                <a href="dashboardInnerMain.html" onclick="changeParentToIframe('dashboard/dashboardInnerMain.html')">X</a>
+                <h2 id="profileName">User</h2>
+                <button class="editProfileButton" onclick="editProfile()" id="editButton">Edit Profile</button>
+            </div>
+            <div class="innerProfile">
+               <div class="profileRow"><label><b>Name:</b></label><p id="userName" class="profileRowAttribute"></p></div>
+               <div class="profileRow"><label><b>Phone Number:</b></label><p id="phoneNumber" class="profileRowAttribute"></p></div>
+               <div class="profileRow"><label><b>Email:</b></label><p id="email" class="profileRowAttribute"></p></div>
+                <div class="profileRow"><label><b>Self-Description:</b></label><p id="description" class="profileRowAttribute"></p></div>
+            </div>
         </div>
 
     <script>
@@ -43,6 +52,10 @@
                         if(jsonData.Profile.Name){
                             const name= jsonData.Profile.Name;
                             document.getElementById('profileName').textContent=name + "'s Profile";
+                            document.getElementById('userName').textContent=jsonData.Profile.Name;
+                            document.getElementById('phoneNumber').textContent=jsonData.Contact.Phone;
+                            document.getElementById('email').textContent=jsonData.Contact.Email;
+                            document.getElementById('description').textContent=jsonData.Description.Experience;
                         }else {
                             console.error("The 'Name' field was not found");
                         }
@@ -53,5 +66,44 @@
                 console.error("The json file was not found in localStorage");
             }
     }
+
+    const originalElements = {
+        userName: document.getElementById('userName'),
+        phoneNumber: document.getElementById('phoneNumber'),
+        email: document.getElementById('email'),
+        description: document.getElementById('description'),
+    };
+
+    const editButton = document.getElementById('editButton');
+        const saveButton = document.createElement('button');
+    function editProfile(){
+        replaceWithInput('userName');
+        replaceWithInput('phoneNumber');
+        replaceWithInput('email');
+        replaceWithInput('description');
+        saveButton.className = editButton.className;
+        saveButton.textContent = "Save";
+        editButton.parentNode.replaceChild(saveButton, editButton);
+    }
+
+    function replaceWithInput(id) {
+        const textElement = document.getElementById(id);
+        const inputField = document.createElement('input');
+        inputField.value = textElement.textContent;
+        inputField.className = textElement.className;
+        textElement.parentNode.replaceChild(inputField, textElement);
+    }
+
+    function revertToOriginal() {
+        for (const id in originalElements) {
+            const inputField = document.getElementById(id);
+            const textElement = originalElements[id];
+            textElement.textContent = inputField.value;
+            inputField.parentNode.replaceChild(textElement, inputField);
+        }
+        saveButton.parentNode.removeChild(saveButton);
+    }
+
+    saveButton.addEventListener('click', revertToOriginal);
     </script>
 </html>
