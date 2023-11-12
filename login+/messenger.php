@@ -2,7 +2,7 @@
 include "users/init.php";
 
 class Message {
-  // (A) CONSTRUCTOR - CONNECT TO THE DATABASE
+  // (A) CONSTRUCTOR - CONNECTION TO THE DATABASE
   private $pdo = null;
   private $stmt = null;
   public $error;
