@@ -36,7 +36,7 @@
                 displayJSONName(nodeText);
             }
         });
-
+        const jsonFile=null;
         function displayJSONName(nodeText){
             const fileName = nodeText;
             const subfolder = 'profileData';
@@ -65,45 +65,56 @@
             } else {
                 console.error("The json file was not found in localStorage");
             }
-    }
-
-    const originalElements = {
-        userName: document.getElementById('userName'),
-        phoneNumber: document.getElementById('phoneNumber'),
-        email: document.getElementById('email'),
-        description: document.getElementById('description'),
-    };
-
-    const editButton = document.getElementById('editButton');
-        const saveButton = document.createElement('button');
-    function editProfile(){
-        replaceWithInput('userName');
-        replaceWithInput('phoneNumber');
-        replaceWithInput('email');
-        replaceWithInput('description');
-        saveButton.className = editButton.className;
-        saveButton.textContent = "Save";
-        editButton.parentNode.replaceChild(saveButton, editButton);
-    }
-
-    function replaceWithInput(id) {
-        const textElement = document.getElementById(id);
-        const inputField = document.createElement('input');
-        inputField.value = textElement.textContent;
-        inputField.className = textElement.className;
-        textElement.parentNode.replaceChild(inputField, textElement);
-    }
-
-    function revertToOriginal() {
-        for (const id in originalElements) {
-            const inputField = document.getElementById(id);
-            const textElement = originalElements[id];
-            textElement.textContent = inputField.value;
-            inputField.parentNode.replaceChild(textElement, inputField);
         }
-        saveButton.parentNode.removeChild(saveButton);
-    }
 
-    saveButton.addEventListener('click', revertToOriginal);
+        const originalElements = {
+            userName: document.getElementById('userName'),
+            phoneNumber: document.getElementById('phoneNumber'),
+            email: document.getElementById('email'),
+            description: document.getElementById('description'),
+        };
+
+        const editButton = document.getElementById('editButton');
+        const saveButton = document.createElement('button');
+        saveButton.textContent = "Save";
+        function editProfile(){
+            replaceWithInput('userName');
+            replaceWithInput('phoneNumber');
+            replaceWithInput('email');
+            replaceWithInput('description');
+            saveButton.className = editButton.className;
+            editButton.parentNode.replaceChild(saveButton, editButton);
+        }
+
+        function saveProfile(){
+            replaceWithText('userName');
+            replaceWithText('phoneNumber');
+            replaceWithText('email');
+            replaceWithText('description');
+            saveButton.parentNode.replaceChild(editButton, saveButton);
+     }
+
+        function replaceWithInput(id) {
+            const textElement = document.getElementById(id);
+            const inputField = document.createElement('input');
+            inputField.value = textElement.textContent;
+            inputField.id=id;
+            inputField.classList.toggle('profileRowAttributeLabel');
+            textElement.parentNode.replaceChild(inputField, textElement);
+        }
+
+        function replaceWithText(id){
+            const inputField = document.getElementById(id);
+         if (inputField) {
+            const textElement = document.createElement('p');
+            textElement.textContent = inputField.tagName === 'INPUT' ? inputField.value : inputField.textContent;
+            textElement.id = id;
+            textElement.classList.toggle('profileRowAttribute');
+            inputField.parentNode.replaceChild(textElement, inputField);
+         } else {
+            console.error(`Element with id '${id}' not found.`);
+         }
+        }
+        saveButton.addEventListener('click', saveProfile);
     </script>
 </html>
