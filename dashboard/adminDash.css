@@ -1,47 +1,4 @@
-.containerCard {
-    display: flex;
-    justify-content: center;
-}
-
-.card {
-    width: 25%; 
-    box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.02);
-    border-bottom:7px solid rgba(11, 63, 87, 1);
-    border-left: 1px solid rgba(214, 214, 214, 1);
-    border-right: 1px solid rgba(214, 214, 214, 1);
-    border-top: 1px solid rgba(214, 214, 214, 1);
-    margin: 1%;
-    margin-top: 4.5%;
-    padding: 10px 10px 10px 10px;
-}
-
-.card h2, .bigBox h2 {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 31px;
-    letter-spacing: -0.02em;
-}
-
-.bigBox {
-    width: 75%;
-    box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.02);
-    border-bottom:7px solid rgba(11, 63, 87, 1);
-    border-left: 1px solid rgba(214, 214, 214, 1);
-    border-right: 1px solid rgba(214, 214, 214, 1);
-    border-top: 1px solid rgba(214, 214, 214, 1);
-    margin: 1%;
-    margin: auto;
-}
-.column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-    font-size: 10px;
-  }
-  .row {margin: 0 -5px;}
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -240,4 +197,199 @@
   .sidebar li .tooltip{
     display: none;
   }
+}
+
+/********************************************************************************************************************************/
+.containerBig {
+  margin-left: 5%;
+}
+
+iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+}
+
+.containerCard {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 25%; 
+  height: 200px;
+  box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
+  border-bottom:8px solid rgba(11, 63, 87, 1);
+  border-left: 1px solid rgba(214, 214, 214, 1);
+  border-right: 1px solid rgba(214, 214, 214, 1);
+  border-top: 1px solid rgba(214, 214, 214, 1);
+  margin: 1%;
+  margin-top: 4.5%;
+  padding: 10px 10px 10px 10px;
+}
+
+.card h2, .bigBox h2, .bigBoxContractor h2 {
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  padding-left: 5px;
+}
+
+.card a, .bigBox a, .bigBoxContractor a {
+  color: blue;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
+  padding: 15px;
+  line-height: 28px;
+}
+
+.bigBox, .bigBoxContractor {
+  width: 75%;
+  height: 350px;
+  box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
+  border-bottom:8px solid rgba(11, 63, 87, 1);
+  border-left: 1px solid rgba(214, 214, 214, 1);
+  border-right: 1px solid rgba(214, 214, 214, 1);
+  border-top: 1px solid rgba(214, 214, 214, 1);
+  margin: 1%;
+  margin: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+.bigBoxClient{
+  width: 75%;
+  box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
+  border-bottom:8px solid rgba(11, 63, 87, 1);
+  border-left: 1px solid rgba(214, 214, 214, 1);
+  border-right: 1px solid rgba(214, 214, 214, 1);
+  border-top: 1px solid rgba(214, 214, 214, 1);
+  margin: 1%;
+  margin: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+.bigBox {
+  background-image: url("workRequestForm.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  font-size: 10px;
+}
+.row {margin: 0 -5px;}
+
+.profile {
+  margin: auto;
+  margin-top: 4.5%;
+  padding: 10px 10px 10px 10px;
+}
+
+.innerProfile {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profileRow{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  padding: 10px;
+}
+
+.profileRowAttribute{
+  width:75%;
+  margin-bottom: 16px;
+}
+
+.profileRow label{
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.profileRowAttributeLabel{
+  width:75%;
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  background-color: rgb(191, 220, 231);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profileHeading{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 25px;
+  align-items: center;
+}
+
+.editProfileButton{
+  color:#1d1b31;
+  background-color: #FFF;
+  box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
+  padding:5px;
+  border: solid 1px #ccc;
+  border-radius: 6px;
+}
+
+.editProfileButton:hover{
+  background-color: rgb(226, 225, 225);
+  border: solid 1.5px;
+}
+
+.registrationContainer {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.fieldSet {
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 1em 2em;
+  border: solid 1px #ccc;
+  border-radius: 6px;
+}
+
+.title {
+  font-size: 2.5em;
+  padding: 0 .25em;
+  color: #646464;
+  width: auto;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+label {
+  margin-top: 1em;
+  text-align: center;
+}
+
+input {
+  padding: .3em;
+  border: solid 1px #999;
+}
+
+input[type="text"] {
+  width: 15em;
+}
+
+textarea {
+  min-width: 50%;
+  min-height: 8em;
+  padding: .5em;
+  border: solid 1px #999;
 }
