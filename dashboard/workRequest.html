@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Work Request Form</title>
+        <meta name="description" content="Work Request Form">
+        <link rel = "stylesheet" href = "clientDash.css">
+        <link href="login+\bootstrap3.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="bigBoxClient profile">
+            <a href="dashboardInnerMain_Client.html" onclick="changeParentToIframe('dashboard/dashboardInnerMain_Client.html')">X</a>
+        <div class="registrationContainer">
+            <div class ="registrationInnerCard">
+                <form>
+                    <fieldset class="fieldSet">
+                    <legend class="title">Work Request Form</legend>
+                    <label for="fname">First Name:</label>
+                    <input type="text"><br>
+
+                    <label for="lname">Last Name:</label>
+                    <input type="text"><br>
+
+                    <label for="email">Email:</label>
+                    <input type="text"><br>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="text"><br>
+
+                    <label for="company">Company:</label>
+                    <input type="text"><br>
+
+                    <label for="website">Website:</label>
+                    <input type="text"><br>
+
+                    <label for="stateCode">State/Province Code:</label>
+                    <select id="stateCode" name="stateCode">
+                        <option value="stateOne">One</option>
+                        <option value="stateTwo">Two</option>
+                        <option value="stateThree">Three</option>
+                        <option value="stateFour">Four</option>
+                    </select><br><br>
+
+                    <h2 class="title">Work Information</h2>
+                    <br>
+                    
+                    <label for="freeform">Job Description:</label>
+                    <br>
+                    <textarea id="freeform" name="freeform" rows="4" cols="50">
+                    Enter job description here...
+                    </textarea>
+                    <br>
+
+                    <input type="submit" value="Submit"><br>
+                </fieldset>
+                </form>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Dashboard | Titan Finder </title>
+        <meta name="description" content="Admin Dashboard">
+        <link rel="stylesheet" href="adminDash.css">
+    </head>
+        
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <div class="logo_name">Titan Finder</div>
+                <i class='bx bx-menu' id="btn" ></i>
+            </div>
+            <ul class="nav-list">
+              <li>
+                <a href="home.html">
+                  <i class='bx bx-home'></i>
+                  <span class="links_name">Home</span>
+                </a>
+                 <span class="tooltip">Home</span>
+              </li>
+              <li>
+               <a href="#">
+                 <i class='bx bx-book-alt' ></i>
+                 <span class="links_name">My Jobs</span>
+               </a>
+               <span class="tooltip">My Jobs</span>
+             </li>
+             <li>
+               <a href="#">
+                 <i class='bx bx-book-add' ></i>
+                 <span class="links_name">Create Job</span>
+               </a>
+               <span class="tooltip">Create Job</span>
+             </li>
+             <li>
+               <a href="#">
+                 <i class='bx bx-pie-chart-alt-2' ></i>
+                 <span class="links_name">Analytics</span>
+               </a>
+               <span class="tooltip">Analytics</span>
+             </li>
+             <li>
+               <a href="#">
+                 <i class='bx bx-folder' ></i>
+                 <span class="links_name">File Manager</span>
+               </a>
+               <span class="tooltip">Files</span>
+             </li>
+             <li>
+               <a href="#">
+                 <i class='bx bx-bell' ></i>
+                 <span class="links_name">Notifications</span>
+               </a>
+               <span class="tooltip">Notifications</span>
+             </li>
+             <li>
+               <a href="#">
+                 <i class='bx bx-cog' ></i>
+                 <span class="links_name">Settings</span>
+               </a>
+               <span class="tooltip">Settings</span>
+             </li>
+             <li class="logout">
+                <a href="login.html">
+                 <i class='bx bx-log-out' id="log_out" ></i>
+                 <span class="logout">Logout</span>
+             </a>
+             </li>
+             <li class="profile">
+                <i class ="bx bx-user" id="profile"></i>
+                <span class="profile">Profile</span>
+             </li>
+            </ul>
+          </div>
+          <section class="home-section">
+              <div class="text">Dashboard</div>
+          </section>
+        
+          <script>
+          let sidebar = document.querySelector(".sidebar");
+          let closeBtn = document.querySelector("#btn");
+        
+          closeBtn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("open");
+            menuBtnChange();
+          });
+        
+          function menuBtnChange() {
+           if(sidebar.classList.contains("open")){
+             closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+           }else {
+             closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+           }
+          }
+          </script>
+        <div class="containerBig">
+            <div class="containerCard">
+                <div class="card">
+                    <h2>Labor (Last 30 Days)</h2>
+                </div>
+                <div class="card">
+                    <h2>Top Jobs(Top 10)</h2>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="column">
+                                <h3>Client</h3>
+                        </div>
+                            <div class="column">
+                                <h3>Client:Owner</h3>
+                        </div>
+                            <div class="column">
+                                <h3>Fill By</h3>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Messages</h2>
+                </div>
+            </div>
+            <div class="bigBox">
+                <h2>Filtered Jobs</h2>
+            </div>
+        </div>
+
+    </body>
+</html>

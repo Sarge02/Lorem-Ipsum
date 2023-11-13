@@ -1,0 +1,17 @@
+{
+    "Profile": {
+        "Name": "Jane Doe",
+        "Job Title": "Dirt Monkey"
+    },
+    "Contact": {
+        "Phone": "123123123",
+        "Email": "meboyo@gmail.com"
+    },
+    "Description": {
+        "Experience": [
+            "Here",
+            "There",
+            "Everywhere"
+        ]
+    }
+}

@@ -1,0 +1,75 @@
+.containerBig {
+    margin-left: 8%;
+}
+
+iframe {
+    width: 75%;
+    height: 100%;
+    border-style: none;
+}
+
+.containerCard {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 25%; 
+    height: 200px;
+    box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
+    border-bottom:8px solid rgba(11, 63, 87, 1);
+    border-left: 1px solid rgba(214, 214, 214, 1);
+    border-right: 1px solid rgba(214, 214, 214, 1);
+    border-top: 1px solid rgba(214, 214, 214, 1);
+    margin: 1%;
+    margin-top: 4.5%;
+    padding: 10px 10px 10px 10px;
+}
+
+.card h2, .bigBox h2, .bigBoxContractor h2 {
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    padding-left: 5px;
+}
+
+.card a, .bigBox a, .bigBoxContractor a {
+    color: blue;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 15px;
+    line-height: 28px;
+}
+
+.bigBox, .bigBoxContractor {
+    width: 75%;
+    height: 350px;
+    box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
+    border-bottom:8px solid rgba(11, 63, 87, 1);
+    border-left: 1px solid rgba(214, 214, 214, 1);
+    border-right: 1px solid rgba(214, 214, 214, 1);
+    border-top: 1px solid rgba(214, 214, 214, 1);
+    margin: 1%;
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+}
+
+.bigBox {
+    background-image: url("workRequestForm.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    font-size: 10px;
+  }
+  .row {margin: 0 -5px;}
+
+
