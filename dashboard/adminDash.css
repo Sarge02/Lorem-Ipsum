@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
+/*css for sidebar */
 .sidebar{
   position: fixed;
   left: 0;
@@ -200,6 +201,7 @@
 }
 
 /********************************************************************************************************************************/
+/*css for big container on left */
 .containerBig {
   margin-left: 5%;
 }
@@ -214,7 +216,7 @@ iframe {
   display: flex;
   justify-content: center;
 }
-
+/* css for middle container */
 .card {
   width: 25%; 
   height: 200px;
@@ -270,14 +272,14 @@ iframe {
   margin: auto;
   padding: 10px 10px 10px 10px;
 }
-
+/* css for work request box on admin page */
 .bigBox {
   background-image: url("workRequestForm.png");
   background-size:contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-
+/* overall css */
 .column {
   float: left;
   width: 25%;
