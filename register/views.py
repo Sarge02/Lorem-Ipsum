@@ -58,6 +58,13 @@ def signup(request):
                 with open('user_data.json', 'w') as json_file:
                     json.dump(data, json_file, indent=4)
 
+                contractor = first_name + ' ' + last_name                    
+                contractor_json_filename = f'{contractor}_job_data.json'     
+                info = {}
+                
+                with open(contractor_json_filename, 'w') as file:
+                    json.dump(info, file, indent=2)    
+
                 print('Registered new user, returning HTTP response')
                 return HttpResponse('You are now registered')
             else:
