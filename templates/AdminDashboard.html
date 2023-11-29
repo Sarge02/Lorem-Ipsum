@@ -87,15 +87,6 @@
 				<p>Website: {{ user_data.Website }}</p>					
 				<p>Phone: {{ user_data.Phone }}</p>				
 			</div>
-             <div class="card">
-                <h2>Quick Search</h2>
-                <a href="viewMatched.html" id="buttonClick" onclick="changeParentToIframe('dashboard/viewMatched.html')">Search Matches</a>
-            </div>
-            <div class="card">
-                <h2>Messages</h2>
-                <a href="viewMessages.html" id="buttonClick" onclick="changeParentToIframe('dashboard/viewMessages.html')">Inbox<br></a>
-                <a href="viewMessages.html" id="buttonClick" onclick="changeParentToIframe('dashboard/viewMessgaes.html')">Send a Message</a>
-            </div>
         </div>
 <div class="bigBoxContractor">
     <div class="jobAssigner">
@@ -106,10 +97,14 @@
                     <div class="jobDetails">
                         <ul>
                             <li>
+                              <strong>Company Name:</strong> {{ job.comp_name }}<br>
                                 <strong>Job Title:</strong> {{ job.job_title }}<br>
                                 <strong>Job Description:</strong> {{ job.job_description }}<br>
                                 <strong>Location:</strong> {{ job.location }}<br>
                                 <strong>Salary:</strong> {{ job.salary }}<br>
+                                <strong>Are Tools Provided?:</strong> {{ job.tools }}<br>
+                                <strong>Is Transportation Provided?:</strong> {{ job.transport }}<br>
+                                <strong>Language Requirements:</strong> {{ job.language }}<br>
                                 <strong>Application Deadline:</strong> {{ job.application_deadline }}<br>
                                 <strong>Posted At:</strong> {{ job.posted_at }}<br>
                                 <br>
@@ -131,10 +126,17 @@
                                 {% endif %}
                             </select>
                             <!-- Hidden input fields for job details -->
+                            <input type="hidden" name="comp_name" value="{{ job.comp_name }}">
+                            <input type="hidden" name="primary_name" value="{{ job.primary_name }}">
+                            <input type="hidden" name="comp_email" value="{{ job.comp_email}}">
+                            <input type="hidden" name="comp_phone" value="{{ job.comp_phone }}">
                             <input type="hidden" name="job_title" value="{{ job.job_title }}">
                             <input type="hidden" name="job_description" value="{{ job.job_description }}">
                             <input type="hidden" name="location" value="{{ job.location }}">
                             <input type="hidden" name="salary" value="{{ job.salary }}">
+                            <input type="hidden" name="tools" value="{{ job.tools }}">
+                            <input type="hidden" name="transport" value="{{ job.transport }}">
+                            <input type="hidden" name="language" value="{{ job.language }}">
                             <input type="hidden" name="application_deadline" value="{{ job.application_deadline }}">
                             <input type="hidden" name="posted_at" value="{{ job.posted_at }}">
                             <!-- Move these outside the loop -->
@@ -216,21 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-          <script>
+ <script>
               let sidebar = document.querySelector(".sidebar");
               let closeBtn = document.querySelector("#btn");
             
@@ -478,7 +466,7 @@ iframe {
 }
 /* css for middle container */
 .card {
-  width: 25%; 
+  width: 75%; 
   height: 200px;
   box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
   border-bottom:8px solid rgba(11, 63, 87, 1);

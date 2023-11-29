@@ -5,10 +5,17 @@ from datetime import datetime
 
 def assign_job_posting(request):
     if request.method == 'POST':
+        comp_name = request.POST.get('comp_name')
+        primary_name=request.POST.get('primary_name')
+        comp_phone=request.POST.get('comp_phone')
+        comp_email=request.POST.get('comp_email')
         job_title = request.POST.get('job_title')
         job_description = request.POST.get('job_description')
         location = request.POST.get('location')
         salary = request.POST.get('salary')
+        tools=request.POST.get('tools')
+        transport=request.POST.get('transport')
+        language=request.POST.get('language')
         application_deadline = request.POST.get('application_deadline')
 
         contractor = request.POST.get('first_name') + ' ' + request.POST.get('last_name')
@@ -16,10 +23,17 @@ def assign_job_posting(request):
         
         # read the job data from the POST req
         job_data = {
+            'comp_name': comp_name,
+            'primary_name': primary_name,
+            'comp_phone': comp_phone,
+            'comp_email': comp_email,
             'job_title': job_title,
             'job_description': job_description,
             'location': location,
             'salary': salary,
+            'tools': tools,
+            'transport': transport,
+            'language': language,
             'application_deadline': application_deadline,
             'posted_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
@@ -71,19 +85,32 @@ def assign_job_posting(request):
         
 
 def create_job_posting(request):
-      
     if request.method == 'POST':
+        comp_name = request.POST.get('comp_name')
+        primary_name=request.POST.get('primary_name')
+        comp_phone=request.POST.get('comp_phone')
+        comp_email=request.POST.get('comp_email')
         job_title = request.POST.get('job_title')
         job_description = request.POST.get('job_description')
         location = request.POST.get('location')
         salary = request.POST.get('salary')
+        tools=request.POST.get('tools')
+        transport=request.POST.get('transport')
+        language=request.POST.get('language')
         application_deadline = request.POST.get('application_deadline')
 
         job_data = {
+            'comp_name': comp_name,
+            'primary_name': primary_name,
+            'comp_phone': comp_phone,
+            'comp_email': comp_email,
             'job_title': job_title,
             'job_description': job_description,
             'location': location,
             'salary': salary,
+            'tools': tools,
+            'transport': transport,
+            'language': language,
             'application_deadline': application_deadline,
             'posted_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }

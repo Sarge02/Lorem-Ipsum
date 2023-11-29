@@ -87,11 +87,6 @@
 				<p>Website: {{ user_data.Website }}</p>					
 				<p>Phone: {{ user_data.Phone }}</p>				
 			</div>
-
-             <div class="card">
-                <h2>Quick Search</h2>
-                <a href="viewMatched.html" id="buttonClick" onclick="changeParentToIframe('dashboard/viewMatched.html')">Search Matches</a>
-            </div>
         </div>
         <div class="bigBoxContractor">
             <h2>Active Jobs</h2>
@@ -100,12 +95,19 @@
 					{% if job_data %}
 						{% for job in job_data %}
 							<li>
-								<strong>Job Title:</strong> {{ job.job_title }}<br>
-								<strong>Job Description:</strong> {{ job.job_description }}<br>
-								<strong>Location:</strong> {{ job.location }}<br>
-								<strong>Salary:</strong> {{ job.salary }}<br>
-								<strong>Application Deadline:</strong> {{ job.application_deadline }}<br>
-								<strong>Posted At:</strong> {{ job.posted_at }}<br>
+                <strong>Company Name:</strong> {{ job.comp_name }}<br>
+                <strong>Primary Contact's Name:</strong> {{ job.primary_name }}<br>
+                <strong>Contact Phone Number:</strong> {{ job.comp_phone }}<br>
+                <strong>Contact Email:</strong> {{ job.comp_email }}<br>
+                  <strong>Job Title:</strong> {{ job.job_title }}<br>
+                  <strong>Job Description:</strong> {{ job.job_description }}<br>
+                  <strong>Location:</strong> {{ job.location }}<br>
+                  <strong>Salary:</strong> {{ job.salary }}<br>
+                  <strong>Are Tools Provided?:</strong> {{ job.tools }}<br>
+                  <strong>Is Transportation Provided?:</strong> {{ job.transport }}<br>
+                  <strong>Language Requirements:</strong> {{ job.language }}<br>
+                  <strong>Application Deadline:</strong> {{ job.application_deadline }}<br>
+                  <strong>Posted At:</strong> {{ job.posted_at }}<br>
 								<br>
 							</li>
 						{% endfor %}
@@ -385,7 +387,7 @@ iframe {
 }
 
 .card {
-  width: 25%; 
+  width: 70%; 
   height: 200px;
   box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
   border-bottom:8px solid rgba(11, 63, 87, 1);
@@ -416,7 +418,7 @@ iframe {
 }
 
 .bigBox, .bigBoxContractor {
-  width: 75%;
+  width: 70%;
   height: auto;
   box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
   border-bottom:8px solid rgba(11, 63, 87, 1);
