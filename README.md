@@ -15,13 +15,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/Sarge02/Lorem-Ipsum">
-    <img src="images/logo.png" alt="Logo" width="400" height="200">
+    <img src="images/logoLongBlue.png" alt="Logo" width="400" height="200">
   </a>
 
-<h3 align="center">Titan Finder</h3>
+<h3 align="center">Rocky Mountain Work Service</h3>
 
   <p align="center">
-    The purpose of this project is to build a website in which independent contractors working in construction can be matched with companies needing construction work done. The website would allow both the companies and the contractors to create accounts and submit work requests. The independent contractors would create a profile with their basic information, resume, and key skills. The companies will submit a work request form detailing the type of construction skills needed as well as other basic job information. The client will have administrative privileges to view the companies and contractors’ submissions, and then match accordingly. Key features of the website are its dashboard for all users which will easily display all actions one could take on the website, a messaging system for users to get in contact with one another once matched by the client, and a matching algorithm that allows contractors to be recommended for jobs automatically based upon their qualifications matching the companies job need.  
+    The purpose of this project is to build a website in which independent contractors working in construction can be matched with companies needing construction work done. The website would allow both the companies and the contractors to create accounts and submit work requests. The independent contractors would create a profile with their basic information. The companies will submit a work request form detailing the type of construction skills needed as well as other basic job information. The client will have administrative privileges to view the companies and contractors’ submissions, and then match accordingly. Key features of the website are its dashboard for all users which will easily display all actions one could take on the website, and a matching system that allows the administrator to assign contractors to companies' jobs.  
     <br />
     <br />
     <a href="https://github.com/Sarge02/Lorem-Ipsum"><strong>Explore the docs »</strong></a>
@@ -62,11 +62,11 @@
 ## About The Project
 
 <!--For when we have domain: [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-<p> &nbsp &nbspThis platform will function as a mediator between employers and employees, allowing employers to request skilled tradesmen or entry-level laborers through the website. The platform will subsequently provide the employer with suitable candidates that match their requirements. </p>
+<p> &nbsp &nbspThis platform will function as a mediator between employers and employees, allowing employers to request skilled tradesmen or entry-level laborers through the website. The platform will allow a user with administrative access to assign independent contractors to these jobs. </p>
 
 <h3> How This Works:</h3>
 
-<p>&nbsp &nbsp Unlike traditional job boards where employers post in search of employees and vice versa, Titan Finder will act as a middleman. Employers will come to the website and request a skilled tradesman or even an entry-level laborer. Titan Finder will then provide the employer with an employee that fits their needs. </p>
+<p>&nbsp &nbsp Unlike traditional job boards where employers post in search of employees and vice versa, Rocky Mountain Work Service will act as a middleman. Employers will come to the website and request a skilled tradesman or even an entry-level laborer. Titan Finder will then provide the employer with an employee that fits their needs. </p>
 
 <div align="center">
    --------------------------Entity Relations Diagram (ERD)--------------------------<br />
@@ -90,9 +90,8 @@
 
 ### Features
 * Job Listings: Employers can submit job openings on your website, specifying the type of worker they need (skilled tradesman, entry-level laborer, etc.), the job location, and the duration of the job.
-* Matching Algorithm: Your website can use a matching algorithm to suggest potential workers to employers based on their job requirements and the workers' profiles.
-* Worker Profiles: Workers can create profiles on your website, including their skills, work experience, and availability.
-* Communication Tools: Employers and workers can communicate through your website to discuss job details, schedule interviews, and negotiate terms.
+* Matching System: The website has a matching system to allow availible contractors and companies with work requests to be matched with each other for jobs.
+* Worker Profiles: Workers can create profiles on your website, with all of their information.
 * Job Board Management: As the middleman, you can manage the job board by reviewing job postings, verifying worker qualifications, and facilitating payments.
 * Rating System: You could implement a rating system where employers can rate workers based on their performance, and workers can rate employers based on their job experience.
 * Mobile Optimization: Your website should be optimized for mobile devices, making it easy for employers and workers to access and use on-the-go.

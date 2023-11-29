@@ -23,8 +23,8 @@
             "FirstName": "John",
             "LastName": "Doe",
             "Phone": "916-222-2222",
-            "Company": "poos",
-            "Website": "poop.edu",
+            "Company": "Generic Office Company",
+            "Website": "goc.edu",
             "Registration_Type__c": "Interested in becoming a Titan Construction Partner (new contractors)"
         },
         {
@@ -32,8 +32,8 @@
             "FirstName": "Royal",
             "LastName": "Smith",
             "Phone": "916-222-2222",
-            "Company": "poos",
-            "Website": "poop.edu",
+            "Company": "Company 1",
+            "Website": "comp.edu",
             "Registration_Type__c": "Interested in becoming a Titan Construction Partner (new contractors)"
         },
         {

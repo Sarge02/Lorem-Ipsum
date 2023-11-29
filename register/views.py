@@ -66,16 +66,16 @@ def signup(request):
                     json.dump(info, file, indent=2)    
 
                 print('Registered new user, returning HTTP response')
-                return JsonResponse('You are now registered')
+                return HttpResponse('You are now registered')
             else:
                 print('Passwords do not match, returning HTTP response')
-                 return JsonResponse(request, '/register/register.html', {'loc': report_loc, 'errorclass': 'alert alert-danger', 'error': 'Sorry. The Passwords do not match.'})
+                return render(request, '/register/register.html', {'loc': report_loc, 'errorclass': 'alert alert-danger', 'error': 'Sorry. The Passwords do not match.'})
         else:
             print('The Username or Email ID is already taken, returning HTTP response')
-             return JsonResponse(request, '/register/register.html', {'loc': report_loc, 'errorclass': 'alert alert-danger', 'error': 'Sorry. The Username or Email ID is already taken.'})
+            return render(request, '/register/register.html', {'loc': report_loc, 'errorclass': 'alert alert-danger', 'error': 'Sorry. The Username or Email ID is already taken.'})
     else:
         print('Email or Password not provided, returning HTTP response')
-         return JsonResponse(request, '/register/register.html', {'loc': report_loc, 'errorclass': 'alert alert-danger', 'error': 'Email and Password are required.'})
+        return render(request, '/register/register.html', {'loc': report_loc, 'errorclass': 'alert alert-danger', 'error': 'Email and Password are required.'})
 
         
         
