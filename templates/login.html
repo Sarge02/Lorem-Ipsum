@@ -5,6 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Home | Login | Titan Construction</title>
+    <div class="topContainer">
+        <div class="Image">
+            <a href="..\home">
+                <img class="pageLogo" src="{% static '/images/logoWhite.svg' %}"> 
+            </a>
+        </div>
+		<div class="links">
+			<nav> 
+				<a href="..\contact">Contact</a> 
+				<a href="..\login">Login</a>
+				<a href="..\about">About Us</a>    
+				<a href="..\home">Home</a> 
+			</nav>     
+		</div>
+    </div>
   <script data-dapp-detection="">
 (function() {
   let alreadyInsertedMetaTag = false
@@ -50,9 +65,7 @@
     <div class="contentWrapper">
         <div class="sitePage">
             <div class="site-page-navigation-container">
-                <a href="../home" class="site-logo-img navbar-inline-logo">
-                    <img src="{% static 'images/Home.png' %}" itemprop="logo" alt="Logo" style="width:auto; background-image:none;">
-                </a>
+
             </div>
             <div class="siteBodyContainer">
                 <div class="siteBody">
@@ -121,31 +134,27 @@
                     <div class="col-md-3">
                         <div class="footer-logo left">
                             <a href="https://titan307.com/team/">
-                                <img src="{% static 'images/TitanLogo4Real.png' %}" itemprop="logo" alt="Logo" style="width:auto; background-image:none;"></img>
+                                <img src="{% static 'images/logoWhite.svg' %}" itemprop="logo" alt="Logo" style="width:120px; margin-left:200px; background-image:none;"></img>
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="link">
-                            <div class="site-footer">
-                                <div class="footerLinks-actions">
-                                    <div class="about">
-                                        <span>
-                                            <a href="/home/privacy" class="sitefooter-link-item" rel="nofollow" target="_top">Privacy & Security Statement</a>
-                                            <a href="/home/terms" class="sitefooter-link-item" rel="nofollow" target="_top">Terms & Conditions</a>
-                                        </span>
-                                    </div>
-                                    <a href="../about.html" class="sitefooter-link-item" rel="nofollow" target="_top">About our service</a>
+                    <div class="col-md-6"><div class="link">
+                        <div class="site-footer">
+                            <div class="footerLinks-actions">
+                                <div class="about">
+                                    <span>
+                                        <a href="/home/privacy" class="sitefooter-link-item" rel="nofollow" target="_top">Privacy &amp; Security Statement</a>
+                                        <a href="/home/terms" class="sitefooter-link-item" rel="nofollow" target="_top">Terms &amp; Conditions</a>
+                                    </span>
+                                
+                                    <a href="../about" class="sitefooter-link-item" rel="nofollow" target="_top">About our service</a>
                                 </div>
+                                  </span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            <div class="col-md-3"><div></div>
 </body>
 </html>
 
@@ -227,5 +236,92 @@ a.actionLink, a.actionLink:visited { color: #2547fe !important; }
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */.btn-danger,.btn-default,.btn-info,.btn-primary,.btn-success,.btn-warning{-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075)}.btn-danger.active,.btn-danger:active,.btn-default.active,.btn-default:active,.btn-info.active,.btn-info:active,.btn-primary.active,.btn-primary:active,.btn-success.active,.btn-success:active,.btn-warning.active,.btn-warning:active{-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}.btn-danger.disabled,.btn-danger[disabled],.btn-default.disabled,.btn-default[disabled],.btn-info.disabled,.btn-info[disabled],.btn-primary.disabled,.btn-primary[disabled],.btn-success.disabled,.btn-success[disabled],.btn-warning.disabled,.btn-warning[disabled],fieldset[disabled] .btn-danger,fieldset[disabled] .btn-default,fieldset[disabled] .btn-info,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-success,fieldset[disabled] .btn-warning{-webkit-box-shadow:none;box-shadow:none}.btn-danger .badge,.btn-default .badge,.btn-info .badge,.btn-primary .badge,.btn-success .badge,.btn-warning .badge{text-shadow:none}.btn.active,.btn:active{background-image:none}.btn-default{background-repeat:repeat-x;border-color:#dbdbdb;border-color:#ccc}.btn-default:focus,.btn-default:hover{background-color:#e0e0e0;background-position:0 -15px}.btn-default.active,.btn-default:active{background-color:#e0e0e0;border-color:#dbdbdb}.btn-default.disabled,.btn-default.disabled.active,.btn-default.disabled.focus,.btn-default.disabled:active,.btn-default.disabled:focus,.btn-default.disabled:hover,.btn-default[disabled],.btn-default[disabled].active,.btn-default[disabled].focus,.btn-default[disabled]:active,.btn-default[disabled]:focus,.btn-default[disabled]:hover,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default.active,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:hover{background-color:#e0e0e0;background-image:none}.btn-primary{background-repeat:repeat-x;border-color:#68a2d4}.btn-primary:focus,.btn-primary:hover{background-color:#609dd2;background-position:0 -15px}.btn-primary.active,.btn-primary:active{background-color:#609dd2;border-color:#68a2d4}.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled.focus,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled].focus,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary.active,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{background-color:#609dd2;background-image:none}.btn-success{background-repeat:repeat-x;border-color:#87cb87}.btn-success:focus,.btn-success:hover{background-color:#80c780;background-position:0 -15px}.btn-success.active,.btn-success:active{background-color:#80c780;border-color:#87cb87}.btn-success.disabled,.btn-success.disabled.active,.btn-success.disabled.focus,.btn-success.disabled:active,.btn-success.disabled:focus,.btn-success.disabled:hover,.btn-success[disabled],.btn-success[disabled].active,.btn-success[disabled].focus,.btn-success[disabled]:active,.btn-success[disabled]:focus,.btn-success[disabled]:hover,fieldset[disabled] .btn-success,fieldset[disabled] .btn-success.active,fieldset[disabled] .btn-success.focus,fieldset[disabled] .btn-success:active,fieldset[disabled] .btn-success:focus,fieldset[disabled] .btn-success:hover{background-color:#80c780;background-image:none}.btn-info{background-repeat:repeat-x;border-color:#8ed4e8}.btn-info:focus,.btn-info:hover{background-color:#85d0e7;background-position:0 -15px}.btn-info.active,.btn-info:active{background-color:#85d0e7;border-color:#8ed4e8}.btn-info.disabled,.btn-info.disabled.active,.btn-info.disabled.focus,.btn-info.disabled:active,.btn-info.disabled:focus,.btn-info.disabled:hover,.btn-info[disabled],.btn-info[disabled].active,.btn-info[disabled].focus,.btn-info[disabled]:active,.btn-info[disabled]:focus,.btn-info[disabled]:hover,fieldset[disabled] .btn-info,fieldset[disabled] .btn-info.active,fieldset[disabled] .btn-info.focus,fieldset[disabled] .btn-info:active,fieldset[disabled] .btn-info:focus,fieldset[disabled] .btn-info:hover{background-color:#85d0e7;background-image:none}.btn-warning{background-repeat:repeat-x;border-color:#f5c786}.btn-warning:focus,.btn-warning:hover{background-color:#f4c37d;background-position:0 -15px}.btn-warning.active,.btn-warning:active{background-color:#f4c37d;border-color:#f5c786}.btn-warning.disabled,.btn-warning.disabled.active,.btn-warning.disabled.focus,.btn-warning.disabled:active,.btn-warning.disabled:focus,.btn-warning.disabled:hover,.btn-warning[disabled],.btn-warning[disabled].active,.btn-warning[disabled].focus,.btn-warning[disabled]:active,.btn-warning[disabled]:focus,.btn-warning[disabled]:hover,fieldset[disabled] .btn-warning,fieldset[disabled] .btn-warning.active,fieldset[disabled] .btn-warning.focus,fieldset[disabled] .btn-warning:active,fieldset[disabled] .btn-warning:focus,fieldset[disabled] .btn-warning:hover{background-color:#f4c37d;background-image:none}.btn-danger{background-repeat:repeat-x;border-color:#e48481}.btn-danger:focus,.btn-danger:hover{background-color:#e27c79;background-position:0 -15px}.btn-danger.active,.btn-danger:active{background-color:#e27c79;border-color:#e48481}.btn-danger.disabled,.btn-danger.disabled.active,.btn-danger.disabled.focus,.btn-danger.disabled:active,.btn-danger.disabled:focus,.btn-danger.disabled:hover,.btn-danger[disabled],.btn-danger[disabled].active,.btn-danger[disabled].focus,.btn-danger[disabled]:active,.btn-danger[disabled]:focus,.btn-danger[disabled]:hover,fieldset[disabled] .btn-danger,fieldset[disabled] .btn-danger.active,fieldset[disabled] .btn-danger.focus,fieldset[disabled] .btn-danger:active,fieldset[disabled] .btn-danger:focus,fieldset[disabled] .btn-danger:hover{background-color:#e27c79;background-image:none}.img-thumbnail,.thumbnail{-webkit-box-shadow:0 1px 2px rgba(0,0,0,.075);box-shadow:0 1px 2px rgba(0,0,0,.075)}.dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover{color:#262626;background-color:#e6e6e6;background-image:-webkit-linear-gradient(top,#f5f5f5 0,#dcdcdc 100%);background-image:-o-linear-gradient(top,#f5f5f5 0,#dcdcdc 100%);background-image:linear-gradient(to bottom,#f5f5f5 0,#dcdcdc 100%);background-repeat:repeat-x;background-image:none}.dropdown-menu>.active>a,.dropdown-menu>.active>a:focus,.dropdown-menu>.active>a:hover{background-image:-webkit-linear-gradient(top,#3884c7 0,#3277b3 100%);background-image:-o-linear-gradient(top,#3884c7 0,#3277b3 100%);background-image:linear-gradient(to bottom,#3884c7 0,#3277b3 100%);background-repeat:repeat-x;background-color:#3277b3}.navbar-default{background-image:-webkit-linear-gradient(top,#fff 0,#f8f8f8 100%);background-image:-o-linear-gradient(top,#fff 0,#f8f8f8 100%);background-image:linear-gradient(to bottom,#fff 0,#f8f8f8 100%);background-repeat:repeat-x;border-radius:4px;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075)}.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.open>a{background-image:-webkit-linear-gradient(top,#dbdbdb 0,#e2e2e2 100%);background-image:-o-linear-gradient(top,#dbdbdb 0,#e2e2e2 100%);background-image:linear-gradient(to bottom,#dbdbdb 0,#e2e2e2 100%);background-repeat:repeat-x;-webkit-box-shadow:inset 0 3px 9px rgba(0,0,0,.075);box-shadow:inset 0 3px 9px rgba(0,0,0,.075)}.navbar-brand,.navbar-nav>li>a{text-shadow:0 1px 0 rgba(255,255,255,.25)}.navbar-inverse{background-image:-webkit-linear-gradient(top,#3c3c3c 0,#222 100%);background-image:-o-linear-gradient(top,#3c3c3c 0,#222 100%);background-image:linear-gradient(to bottom,#3c3c3c 0,#222 100%);background-repeat:repeat-x;border-radius:4px}.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a{background-image:-webkit-linear-gradient(top,#080808 0,#0f0f0f 100%);background-image:-o-linear-gradient(top,#080808 0,#0f0f0f 100%);background-image:linear-gradient(to bottom,#080808 0,#0f0f0f 100%);background-repeat:repeat-x;-webkit-box-shadow:inset 0 3px 9px rgba(0,0,0,.25);box-shadow:inset 0 3px 9px rgba(0,0,0,.25)}.navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav>li>a{text-shadow:0 -1px 0 rgba(0,0,0,.25)}.navbar-fixed-bottom,.navbar-fixed-top,.navbar-static-top{border-radius:0}@media (max-width:767px){.navbar .navbar-nav .open .dropdown-menu>.active>a,.navbar .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar .navbar-nav .open .dropdown-menu>.active>a:hover{color:#fff;background-image:-webkit-linear-gradient(top,#3884c7 0,#3277b3 100%);background-image:-o-linear-gradient(top,#3884c7 0,#3277b3 100%);background-image:linear-gradient(to bottom,#3884c7 0,#3277b3 100%);background-repeat:repeat-x}}.alert{text-shadow:0 1px 0 rgba(255,255,255,.2)}.progress{background-image:-webkit-linear-gradient(top,#ebebeb 0,#f5f5f5 100%);background-image:-o-linear-gradient(top,#ebebeb 0,#f5f5f5 100%);background-image:linear-gradient(to bottom,#ebebeb 0,#f5f5f5 100%);background-repeat:repeat-x}.progress-bar{background-image:-webkit-linear-gradient(top,#3884c7 0,#2d6a9f 100%);background-image:-o-linear-gradient(top,#3884c7 0,#2d6a9f 100%);background-image:linear-gradient(to bottom,#3884c7 0,#2d6a9f 100%);background-repeat:repeat-x}.progress-bar-success{background-image:-webkit-linear-gradient(top,#5cb85c 0,#449d44 100%);background-image:-o-linear-gradient(top,#5cb85c 0,#449d44 100%);background-image:linear-gradient(to bottom,#5cb85c 0,#449d44 100%);background-repeat:repeat-x}.progress-bar-info{background-image:-webkit-linear-gradient(top,#5bc0de 0,#31b0d5 100%);background-image:-o-linear-gradient(top,#5bc0de 0,#31b0d5 100%);background-image:linear-gradient(to bottom,#5bc0de 0,#31b0d5 100%);background-repeat:repeat-x}.progress-bar-warning{background-image:-webkit-linear-gradient(top,#f0ad4e 0,#ec971f 100%);background-image:-o-linear-gradient(top,#f0ad4e 0,#ec971f 100%);background-image:linear-gradient(to bottom,#f0ad4e 0,#ec971f 100%);background-repeat:repeat-x}.progress-bar-danger{background-image:-webkit-linear-gradient(top,#d9534f 0,#c9302c 100%);background-image:-o-linear-gradient(top,#d9534f 0,#c9302c 100%);background-image:linear-gradient(to bottom,#d9534f 0,#c9302c 100%);background-repeat:repeat-x}.progress-bar-striped{background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent)}.list-group{border-radius:4px;-webkit-box-shadow:0 1px 2px rgba(0,0,0,.075);box-shadow:0 1px 2px rgba(0,0,0,.075)}.list-group-item.active,.list-group-item.active:focus,.list-group-item.active:hover{text-shadow:0 -1px 0 #2d6a9f;border-color:#3070a9}.list-group-item.active .badge,.list-group-item.active:focus .badge,.list-group-item.active:hover .badge{text-shadow:none}.well{background-image:-webkit-linear-gradient(top,#e8e8e8 0,#f5f5f5 100%);background-image:-o-linear-gradient(top,#e8e8e8 0,#f5f5f5 100%);background-image:linear-gradient(to bottom,#e8e8e8 0,#f5f5f5 100%);background-repeat:repeat-x;border-color:#dcdcdc;-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 1px 0 rgba(255,255,255,.1)}
 
+.topContainer {
+    background-color:  #052534;
+    background-image: url(../static/images/constructionBg.svg);
+    background-position-x: right;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 120px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topContainer a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px; 
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 1.5%;
+  }
+  
+  .disabled {
+	  pointer-events: none;
+  }
+  
+  /* Change the color of links on hover */
+  .links a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topContainer a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .container {
+    margin-bottom: 5.5%;
+  }
+
+
+.abImg {
+  background-image: url(images/about-construction.jpeg);
+  min-height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Image{
+  float: left;
+  min-height: 80px;
+  width: auto;
+  position: absolute;
+}
+
+.pageLogo {
+  float: left;
+  width: 100px;
+  margin: .5%;
+  position: absolute;
+}
+
+
+.container {
+  margin-top: 10px;
+}
+
+/***********Raf Footer***********/
+.footer-wrap .footerTabs a { font-size: 14px;font-weight: 300; }
+.footer-wrap .footerTabs a,.footer-wrap .footerLinks-actions a, .poweredby, .poweredby a { color: #fff; line-height: 2; }
+.footer-wrap .footerLinks-actions { margin-top: 30px;margin-left:250px }
+.footer-wrap .footerLinks-actions a, .poweredby, .poweredby a { font-size: 12px;margin-left:20px }
+.footer-wrap .about { color:white;margin-top: 20px;font-size: 12px;margin-left:-95px }
+.footer-wrap { background:#052534;padding-top:40px;padding-bottom:40px;padding-right:80px }
+.site-footer { color:white; }
+.footer-wrap .footerTabs a:hover, .footer-wrap .footerLinks-actions a:hover, .poweredby, .poweredby a:hover { color:#deff5b; }
+.footer-logo {}
 
 </style>

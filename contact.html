@@ -23,7 +23,35 @@
             </ul>
         </nav>
     </div>
-    <style>
+    <style>  
+        .fieldSet {
+            margin: auto;
+            margin-top: 35px;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            padding: 1em 2em;
+            border: solid 1px #ccc;
+            border-radius: 6px;
+        }
+
+            .title {
+                font-size: 2.5em;
+                padding: 0 .25em;
+                color: #646464;
+                 width: auto;
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+
+            label {
+                margin-top: 1em;
+                text-align: center;
+            }
+
+            input {
+                padding: .3em;
+                border: solid 1px #999;
+            }
 			/* Style inputs with type="text", select elements and textareas */
 			input[type=text], select, textarea {
 			  width: 100%; /* Full width */
@@ -38,7 +66,7 @@
 
 			/* Style the submit button with a specific background color etc */
 			input[type=submit] {
-			  background-color: #04AA6D;
+			  background-color: rgb(40, 4, 170);
 			  color: white;
 			  padding: 12px 20px;
 			  border: none;
@@ -48,7 +76,7 @@
 
 			/* When moving the mouse over the submit button, add a darker green color */
 			input[type=submit]:hover {
-			  background-color: #45a049;
+			  background-color: rgb(21, 4, 80)
 			}
 
 			/* Add a background color and some padding around the form */
@@ -60,31 +88,28 @@
 			  width: 500px;
 			  top: 50px;
 			}
-		</style>
+	</style>
 </head>
 
 <body>
-<div class="container">
+<div class="contactContainer">
     <form action="action_page.php">
-
+        <fieldset class="fieldSet">
+        <legend class="title">Contact Us</legend>
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
         <label for="lname">Last Name</label>
         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-        <label for="country">Country</label>
-        <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-        </select>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email..">
 
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
         <input type="submit" value="Submit">
-
+        </fieldset>
     </form>
 	
 

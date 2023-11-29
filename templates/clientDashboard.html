@@ -17,7 +17,7 @@
     </div>
     <ul class="nav-list">
       <li>
-        <a href="home.html">
+        <a href="/home">
           <i class='bx bx-home'></i>
           <span class="links_name">Home</span>
         </a>
@@ -98,6 +98,18 @@
 					<form action="{% url 'create_job_posting' %}" method="POST">
 					{% csrf_token %}
 
+          <label for="comp_name">Company Name:</label> 
+					<input type="text" id="comp_name" name="comp_name" required>
+
+          <label for="primary_name">Primary Contact's Name:</label>
+					<input type="text" id="primary_name" name="primary_name" required>
+
+          <label for="comp_phone">Primary Contact's Phone:</label>
+					<input type="text" id="comp_phone" name="comp_phone" required>
+
+          <label for="comp_email">Primary Contact's Email:</label>
+					<input type="text" id="comp_email" name="comp_email" required>
+
 					<label for="job_title">Job Title:</label>
 					<input type="text" id="job_title" name="job_title" required>
 
@@ -106,6 +118,15 @@
 
 					<label for="location">Location:</label>
 					<input type="text" id="location" name="location" required>
+
+          <label for="tools">Tools Provided?</label>
+					<input type="text" id="tools" name="tools" required>
+
+          <label for="transport">Transportation Provided?:</label>
+					<input type="text" id="transport" name="transport" required>
+
+          <label for="language">Language Requirements:</label>
+					<input type="text" id="language" name="language" required>
 
 					<label for="salary">Salary:</label>
 					<input type="text" id="salary" name="salary">
@@ -415,8 +436,7 @@ iframe {
 }
 
 .bigBox, .bigBoxContractor {
-  width: 45%;
-  height: 500px;
+  width: 55%;
   box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
   border-bottom:8px solid rgba(11, 63, 87, 1);
   border-left: 1px solid rgba(214, 214, 214, 1);

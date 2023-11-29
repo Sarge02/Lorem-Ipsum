@@ -141,7 +141,7 @@ This is the general timeline of when tasks will be started. Ideally each task wi
 
 <!-- CONTACT -->
 ## Contact
-  Developers: Megan Gross, Ryan Sarginson, Sameer Shaik, Christian Villagran, Rafael Mercado, Daniel Mason, Covi Singh, Illia Pashkovich
+  Developers: Megan Gross, Ryan Sarginson, Sameer Shaik, Christian Villagran, Rafael Mercado, Daniel Mason, Covi Singh
 
 Project Link: [https://github.com/Sarge02/Lorem-Ipsum](https://github.com/Sarge02/Lorem-Ipsum)
 

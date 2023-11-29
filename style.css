@@ -48,6 +48,14 @@
     margin-bottom: 5.5%;
   }
 
+  .contactContainer {
+    margin: auto;
+    margin-bottom: 5.5%;
+    padding: 20px;
+    width: 75%;
+    position: relative;
+  }
+
 /**********************************************************/
 /* Christian About Us Page*/
 
