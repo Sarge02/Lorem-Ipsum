@@ -2,6 +2,8 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
 import json
 from datetime import datetime
+from django.conf import settings
+from django.core.mail import send_mail
 
 def assign_job_posting(request):
     if request.method == 'POST':
@@ -18,7 +20,11 @@ def assign_job_posting(request):
         language=request.POST.get('language')
         application_deadline = request.POST.get('application_deadline')
 
-        contractor = request.POST.get('first_name') + ' ' + request.POST.get('last_name')
+        first = request.POST.get('first_name') 
+        last = request.POST.get('last_name')
+        contractor = first + ' ' + last
+
+        email = request.POST.get('Email')
         print(contractor)
         
         # read the job data from the POST req
@@ -39,6 +45,15 @@ def assign_job_posting(request):
         }
 
         contractor_json_filename = f'{contractor}_job_data.json'
+
+        with open('user_data.json') as user_json_file:
+                user_data = json.load(user_json_file)
+
+        existing_users = user_data.get('u_data', [])
+        for user in existing_users:
+           if user['FirstName'] == first and user['LastName'] == last:
+               email = list(user.keys())[0]
+
         try:
             with open(contractor_json_filename, 'r') as file:
                 existing_data = json.load(file)
@@ -65,6 +80,23 @@ def assign_job_posting(request):
             except FileNotFoundError:
                 with open(all_job_data_filename, 'w') as file:
                     json.dump(existing_data, file, indent=2)
+
+            send_mail(
+                'Job Assigned Notification',
+                f'The job {job_title} has been assigned to contractor: {contractor}',
+                settings.EMAIL_HOST_USER,
+                [comp_email],
+                fail_silently=False,
+            )
+
+            send_mail(
+                'Job Assigned Notification',
+                f'You have been assigned to the job: {job_title}',
+                settings.EMAIL_HOST_USER,
+                [email],
+                fail_silently=False,
+            )
+
             response_data = {
                 'success': True,
                 'message': f'{job_title} assigned to {contractor}',
@@ -213,4 +245,5 @@ def contact(request):
     return render(request, 'contact.html')
 
 def about(request):
-    return render(request, 'about.html')        
+    return render(request, 'about.html')     
+
