@@ -1,4 +1,4 @@
-# Project Titan Finder by Team Lorem Ipsum
+# Project Rocky Mountain Work Service by Team Lorem Ipsum
 
 <!-- PROJECT SHIELDS -->
 <!--ReadMe Template Credit: https://github.com/othneildrew/Best-README-Template/blob/master/README.md
@@ -15,7 +15,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Sarge02/Lorem-Ipsum">
-    <img src="images/logoLongBlue.png" alt="Logo" width="400" height="200">
+    <img src="readMeImages/logoLongBlue.png" alt="Logo" width="400" height="300">
   </a>
 
 <h3 align="center">Rocky Mountain Work Service</h3>
@@ -101,7 +101,7 @@
 
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
-<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
+<p align="right">(<a href="#project-rocky-mountain-work-service-by-team-lorem-ipsum">back to top</a>)</p>
 
 <!-- Dev Instructions -->
 ## Developer Instructions
@@ -118,14 +118,112 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    git clone https://github.com/Sarge02/Lorem-Ipsum.git
    ```
-<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
+<p align="right">(<a href="#project-rocky-mountain-work-service-by-team-lorem-ipsum">back to top</a>)</p>
 
 <!-- Deployment -->
 ## Deployment
+ ### Deployment Process
+ <p>
+	Initial deployment is done using an Azure virtual machine, the operating system does not matter as the python code and modules used in our project are OS independent. <br> 
+    The virtual machine launch settings are bog standard, meaning when deploying a new virtual machine for the first time you will use default settings for the latest Debian distribution. However the network settings need to be customized to access the network range we defined in our resource group for the public IP address and NAT forwarding rules. <br>  In this image above we can observe the public IP address is “None” because we already have a virtual machine associated with our defined public IP address. If you are creating a new virtual machine due to a critical failure in troubleshooting you will have to dissociate the IP address from the old deleted virtual machine to free it for use. <br> The public IP address should now be available under the Public IP tab when setting up new virtual machines. <br>  Next we have to setup the necessary port forwarding rules in order to give the outside world access to the website hosted on the virtual machine. Enable SSH port 22 to access the virtual machine securely using a predefined service account, this can be disabled once deployment is finished for security hardening. You will also want to check port 80 for HTTP traffic forwarding. Currently we do not have SSL implemented nor any DNS A records linked to our public IP. If HTTPS is used, you will also enable HTTPS and optionally disable HTTP for further security hardening.
 
-Instructions to be added in CSC 191 with the progression of this project.
 
-<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
+	After the networking setup is done you can click Review + Create in order to finish deploying the virtual machine.
+  </p>
+
+ ### Accessing the Virtual Machine
+Once the virtual machine has been created you can access the resource by searching for virtual machines, this tab will show the newly created resource.
+From the virtual machine’s dashboard, copy the public IP address. 
+
+Next on your computer open a command prompt and enter the command below in order to connect to the virtual machine.
+```sh
+ssh SStalone01@20.163.18.235
+```
+The service account SStalone01 was defined in our deployment of the production virtual machine. This account password has been given to the product owner but can be reset using the virtual machine’s dashboard. Once successfully logged into the virtual machine you will see the prompt below.
+
+ ### Prerequisites  
+ <p>
+	If this is a new deployment you will have to install the dependencies below in order to get the application running correctly.
+  </p>
+
+#### Install Git, PIP, & Python Packages
+ <p> First install Git in order to pull the code repository from Github. Use the command below </p>
+
+  ```sh
+sudo apt-get install git
+```
+<p>Next install PIP to grab Django dependencies for app back-end functionality. Python3 comes pre-installed on default deployments of virtual machines in Azure but without the pip installer.</p>
+
+  ```sh
+  sudo apt-get install pip
+  ```
+  <p>Lastly use pip to install the necessary python packages for the Django project.</p>
+
+```sh
+pip install django
+pip install django-cors-headers
+```
+#### Cloning the Repository
+<p>We use git to clone the repository from Github. Use the command below in order to pull the latest version of the application’s source code.</p>
+
+  ```sh
+git clone https://github.com/Sarge02/Lorem-Ipsum.git
+```
+#### Running the Development Server
+<p>Now we can start the server and make sure we are not missing any dependencies. Change into the project directory using the command below.</p>
+
+  ```sh
+cd RockyMountainWorkService
+```
+<p>Run the server using the command below.</p>
+
+```sh
+sudo python3 manage.py runserver 0.0.0.0:80
+```
+<p>If there are no errors you can proceed to the next section. If this is a new deployment of the project then you will have to modify the hosts list inside settings.py for the main application in order to let the outside internet access the Django endpoint. Close the server by hitting ctrl + c then change into the login_register folder using the command below.</p>
+
+  ```sh
+cd login_register
+```
+<p>Next modify the settings.py file using the built in text editor nano with the command below. Then navigate to the line that says ALLOWED_HOSTS = [ ]</p>
+
+  ```sh
+nano settings.py
+```
+<p>Add the public IP address you used to SSH into the virtual machine into the allowed hosts list, the image below shows what the new code line should look like.
+
+Now Django references the public IP of the virtual machine and connections should go through according to the port we specify for the Django app and our port forwarding rule for HTTP on port 80.</p>
+#### Running in the Background
+<p>In order to keep the server running once we close the terminal session we use the process container tmux. Close the server by hitting Ctrl + C, then install tmux using the command below.</p>
+
+```sh
+sudo apt-get install tmux
+```
+<p>Now just run tmux by typing tmux into the console and hitting enter. The window should have a little green bar indicating you are running in a detachable session.
+
+Now you rerun the same command to start the server again.</p>
+
+  ```sh
+sudo python3 manage.py runserver 0.0.0.0:80
+```
+<p>The website is now running as a background process, use ctrl + b then press d to detach from the tmux session. You can now close the command prompt window and the website will still be running for clients and contractors to access.</p>
+
+### Post-Deployment Checks
+<p>Verify the website is now accessible in the browser by entering the public IP address 20.163.18.235 into the search bar.
+
+Create a new test account to verify the registration and login functionality works as expected, if there are errors they will be output to the Django console window.</p>
+
+#### Identifying Deployment Issues 
+<p>Deployment issues should have been ameliorated during the deployment process however if the website is not functioning correctly you can triage any errors by looking at the error logs in the console and referencing the deployment guide steps for the relevant error.</p>
+
+### Rollback Procedure 
+<p>If new code changes have broken some functionality or the entire application you can access previous github versions to restore the website to a working version by going to the Github repository directly and grabbing a previous branch’s github URL.</p>
+
+### Rolling Back to the Previous Version
+<p>With a previous but working version copied you can revisit the deployment process using this new link during the git clone step in section 4.3.2.</p>
+
+
+<p align="right">(<a href="#project-rocky-mountain-work-service-by-team-lorem-ipsum">back to top</a>)</p>
 
 <!-- Jira Timeline/Milestone -->
 ## Timeline
@@ -136,7 +234,7 @@ This is the general timeline of when tasks will be started. Ideally each task wi
 -  Sprint 7:Messaging center
 -  Sprint 8: Matching algorithm
 
-<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
+<p align="right">(<a href="#project-rocky-mountain-work-service-by-team-lorem-ipsum">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
@@ -144,14 +242,14 @@ This is the general timeline of when tasks will be started. Ideally each task wi
 
 Project Link: [https://github.com/Sarge02/Lorem-Ipsum](https://github.com/Sarge02/Lorem-Ipsum)
 
-<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
+<p align="right">(<a href="#project-rocky-mountain-work-service-by-team-lorem-ipsum">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
 * []() California State University, Sacramento | Engineering and Computer Science Department
 
-<p align="right">(<a href="#project-titan-finder-by-team-lorem-ipsum">back to top</a>)</p>
+<p align="right">(<a href="#project-rocky-mountain-work-service-by-team-lorem-ipsum">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
