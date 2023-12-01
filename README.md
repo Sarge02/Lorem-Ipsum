@@ -108,15 +108,8 @@
 
 <!-- Dev Instructions -->
 ## Developer Instructions
-The Lorem Ipsum team used VSCode as their IDE and the following instructions will demonstrate and explain how to set up the Rocky Mountain Work Service with VSCode. If your VS Code is not currently set up with git, you can follow these instructions on their website: Visual Studio - Intro to Git. 
-To start, open a new window in VSCode and select “Clone Git Repository”.Clicking this will open a drop down search bar at the top of the screen where the git repo link can be posted. 
-The link is found at https://github.com/Sarge02/Lorem-Ipsum by navigating to the “<> Code” button. From here a dropdown menu will appear that allows you to copy the link. 
-
-As aforementioned, this is the link that will be pasted into VSCode. Once pasted, hit enter and file explorer will open, prompting you to choose a file to clone the repository into. From here, you can make a new folder or select a pre-existing folder.
-The project is now set up and ready to be viewed and/or edited.
-
 <!-- ### Prerequisites This is an example of how to list things you need to use the software and how to install them. -->
-## How to Push/Pull from Git
+### How to Push/Pull from Git
 
 If your local machine has changes done that differ from the version in github it would be best to update github with the new changes. This means "push" the changes from the local machine to github. First the changes need to be commited. 
 ```sh
