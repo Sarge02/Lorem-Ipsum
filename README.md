@@ -70,20 +70,20 @@
 
 <div align="center">
    --------------------------Entity Relations Diagram (ERD)--------------------------<br />
-  <img src="readMeImages/erd.png" alt="Entity Relations Diagram (ERD)"><br /><br />
+  <img src="readMeImages/erd.png" alt="Entity Relations Diagram (ERD)" style="width:1000px;"><br /><br />
   <br />
-    --------------------------Prototype for the Home page-------------------------- <br />
-  <img src="readMeImages/homePrototype.png" alt="Prototype for the Home page"><br /><br />
-  --------------------------Prototype for the Registration page--------------------------<br />
-    <img src="readMeImages/registerPrototype.png" alt="Prototype for the Registration page"><br /><br />
-    --------------------------Prototype for the Login page-------------------------- <br />
-    <img src="readMeImages/loginPrototype.png" alt="Prototype for the Login page"><br /><br />
-    --------------------------Prototype for the independent contractor's dashboard page--------------------------<br />
-    <img src="readMeImages/workersPrototype.png" alt="Prototype for the independent contractor's dashboard page"><br /><br />
-    --------------------------Prototype for the companies dashboard page--------------------------<br />
-    <img src="readMeImages/clientPrototype.png" alt="Prototype for the companies dashboard page"><br /><br />
-    --------------------------Prototype for the admin dashboard page--------------------------<br />
-    <img src="readMeImages/adminPrototype.png" alt="Prototype for the admin dashboard page"><br /><br />
+    --------------------------Home Page-------------------------- <br />
+  <img src="readMeImages/home.png" alt="Home page" style="width:1000px;"><br /><br />
+  --------------------------Registration Page--------------------------<br />
+    <img src="readMeImages/register.png" alt="Registration page" style="width:1000px;"><br /><br />
+    --------------------------Login Page-------------------------- <br />
+    <img src="readMeImages/login.png" alt="Login page" style="width:1000px;"><br /><br />
+    --------------------------Contractor's Dashboard Page--------------------------<br />
+    <img src="readMeImages/contract.png" alt="independent contractor's dashboard page" style="width:1000px;"><br /><br />
+    --------------------------Companies Dashboard Page--------------------------<br />
+    <img src="readMeImages/client.png" alt="companies dashboard page" style="width:1000px;"><br /><br />
+    --------------------------Admin Dashboard Page--------------------------<br />
+    <img src="readMeImages/admin.png" alt="admin dashboard page" style="width:1000px;"><br /><br />
   </div>
 </div>
 
@@ -93,24 +93,33 @@
 * Matching System: The website has a matching system to allow availible contractors and companies with work requests to be matched with each other for jobs.
 * Worker Profiles: Workers can create profiles on your website, with all of their information.
 * Job Board Management: As the middleman, you can manage the job board by reviewing job postings, verifying worker qualifications, and facilitating payments.
-* Rating System: You could implement a rating system where employers can rate workers based on their performance, and workers can rate employers based on their job experience.
 * Mobile Optimization: Your website should be optimized for mobile devices, making it easy for employers and workers to access and use on-the-go.
 
 
 ### Built With
 
+* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+* ![Django][Django.com]
 
 <p align="right">(<a href="#project-rocky-mountain-work-service-by-team-lorem-ipsum">back to top</a>)</p>
 
 <!-- Dev Instructions -->
 ## Developer Instructions
+The Lorem Ipsum team used VSCode as their IDE and the following instructions will demonstrate and explain how to set up the Rocky Mountain Work Service with VSCode. If your VS Code is not currently set up with git, you can follow these instructions on their website: Visual Studio - Intro to Git. 
+To start, open a new window in VSCode and select “Clone Git Repository”.Clicking this will open a drop down search bar at the top of the screen where the git repo link can be posted. 
+The link is found at https://github.com/Sarge02/Lorem-Ipsum by navigating to the “<> Code” button. From here a dropdown menu will appear that allows you to copy the link. 
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+As aforementioned, this is the link that will be pasted into VSCode. Once pasted, hit enter and file explorer will open, prompting you to choose a file to clone the repository into. From here, you can make a new folder or select a pre-existing folder.
+The project is now set up and ready to be viewed and/or edited.
 
-<!-- ### Prerequisites This is an example of how to list things you need to use the software and how to install them. -->
+Updated code can be pulled from the git repository by navigating to the sidebar in VSCode and clicking the button, named Source Control, with three circles. 
 
+From this button, you will now be viewing the source control/git screen. Clicking the ellipses in the corner will open a drop down menu showing all the possible options for the project in git.
+
+As seen above, in the dropdown menu, hovering over the 10th option label “Pull, Push” and then selecting the 2nd option from the subsequent dropdown will allow you to pull from the git repository and be up to date with the latest code. 
 
 ### Installation
 
@@ -125,7 +134,7 @@ To get a local copy up and running follow these simple example steps.
  ### Deployment Process
  <p>
 	Initial deployment is done using an Azure virtual machine, the operating system does not matter as the python code and modules used in our project are OS independent. <br> 
-    The virtual machine launch settings are bog standard, meaning when deploying a new virtual machine for the first time you will use default settings for the latest Debian distribution. However the network settings need to be customized to access the network range we defined in our resource group for the public IP address and NAT forwarding rules. <br>  In this image above we can observe the public IP address is “None” because we already have a virtual machine associated with our defined public IP address. If you are creating a new virtual machine due to a critical failure in troubleshooting you will have to dissociate the IP address from the old deleted virtual machine to free it for use. <br> The public IP address should now be available under the Public IP tab when setting up new virtual machines. <br>  Next we have to setup the necessary port forwarding rules in order to give the outside world access to the website hosted on the virtual machine. Enable SSH port 22 to access the virtual machine securely using a predefined service account, this can be disabled once deployment is finished for security hardening. You will also want to check port 80 for HTTP traffic forwarding. Currently we do not have SSL implemented nor any DNS A records linked to our public IP. If HTTPS is used, you will also enable HTTPS and optionally disable HTTP for further security hardening.
+    The virtual machine launch settings are bog standard, meaning when deploying a new virtual machine for the first time you will use default settings for the latest Debian distribution. However the network settings need to be customized to access the network range we defined in our resource group for the public IP address and NAT forwarding rules. <br> If you are creating a new virtual machine due to a critical failure in troubleshooting you will have to dissociate the IP address from the old deleted virtual machine to free it for use. <br> The public IP address should now be available under the Public IP tab when setting up new virtual machines. <br>  Next we have to setup the necessary port forwarding rules in order to give the outside world access to the website hosted on the virtual machine. Enable SSH port 22 to access the virtual machine securely using a predefined service account, this can be disabled once deployment is finished for security hardening. You will also want to check port 80 for HTTP traffic forwarding. Currently we do not have SSL implemented nor any DNS A records linked to our public IP. If HTTPS is used, you will also enable HTTPS and optionally disable HTTP for further security hardening.
 
 
 	After the networking setup is done you can click Review + Create in order to finish deploying the virtual machine.
@@ -169,6 +178,8 @@ pip install django-cors-headers
   ```sh
 git clone https://github.com/Sarge02/Lorem-Ipsum.git
 ```
+<p align="right">(<a href="#project-rocky-mountain-work-service-by-team-lorem-ipsum">back to top</a>)</p>
+
 #### Running the Development Server
 <p>Now we can start the server and make sure we are not missing any dependencies. Change into the project directory using the command below.</p>
 
@@ -190,7 +201,7 @@ cd login_register
   ```sh
 nano settings.py
 ```
-<p>Add the public IP address you used to SSH into the virtual machine into the allowed hosts list, the image below shows what the new code line should look like.
+<p>Add the public IP address you used to SSH into the virtual machine into the allowed hosts list.
 
 Now Django references the public IP of the virtual machine and connections should go through according to the port we specify for the Django app and our port forwarding rule for HTTP on port 80.</p>
 #### Running in the Background
@@ -222,18 +233,6 @@ Create a new test account to verify the registration and login functionality wor
 ### Rolling Back to the Previous Version
 <p>With a previous but working version copied you can revisit the deployment process using this new link during the git clone step in section 4.3.2.</p>
 
-
-<p align="right">(<a href="#project-rocky-mountain-work-service-by-team-lorem-ipsum">back to top</a>)</p>
-
-<!-- Jira Timeline/Milestone -->
-## Timeline
-
-This is the general timeline of when tasks will be started. Ideally each task will be completed within its two week sprint deadline, however incomplete tasks will be continued in the next sprint. Our general timeline is as follows: 
--  Sprint 5: Login feature and user dashboard development
--  Sprint 6: User profile, Admin matching system
--  Sprint 7:Messaging center
--  Sprint 8: Matching algorithm
-
 <p align="right">(<a href="#project-rocky-mountain-work-service-by-team-lorem-ipsum">back to top</a>)</p>
 
 <!-- CONTACT -->
@@ -255,6 +254,7 @@ Project Link: [https://github.com/Sarge02/Lorem-Ipsum](https://github.com/Sarge0
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/Sarge02/Lorem-Ipsum.svg?style=for-the-badge
+[Django.com]: https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white
 [contributors-url]: https://github.com/Sarge02/Lorem-Ipsum/graphs/contributors
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
