@@ -200,7 +200,7 @@ def signin(request):
     for user in existing_users:
         user_type = user.get('Registration_Type__c', '')
 
-        if user_type == 'Interested in becoming a Titan Construction Partner (new contractors)':
+        if user_type == 'Interested in becoming a construction partner (new contractors)':
             active_contractors.append(user)
 
     with open('job_data.json') as job_json_file:
@@ -215,10 +215,10 @@ def signin(request):
                     ufN = user.get('FirstName', '')  
                     ulN = user.get('LastName', '')  
                     user_name = ufN + ' ' + ulN                      
-                    if user_type == 'Interested in contracting Titan Construction Partners':
+                    if user_type == 'Interested in contracting construction partners':
                         # Render the client dashboard template with user and job data
                         return render(request, 'clientDashboard.html', {'user_data': user})
-                    elif user_type == 'Interested in becoming a Titan Construction Partner (new contractors)':
+                    elif user_type == 'Interested in becoming a construction partner (new contractors)':
                         with open(f'{user_name}_job_data.json') as job_json_file:
                             job_data = json.load(job_json_file)                    
                         return render(request, 'contractorDashboard.html', {'user_data': user, 'job_data': job_data})

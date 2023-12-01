@@ -66,14 +66,10 @@
        <span class="tooltip">Settings</span>
      </li>
      <li class="logout">
-        <a href="login.html">
+        <a href="/home">
          <i class='bx bx-log-out' id="log_out" ></i>
          <span class="logout">Logout</span>
      </a>
-     </li>
-     <li class="profile">
-        <i class ="bx bx-user" id="profile"></i>
-        <span class="profile">Profile</span>
      </li>
     </ul>
   </div>
@@ -87,11 +83,6 @@
 				<p>Website: {{ user_data.Website }}</p>					
 				<p>Phone: {{ user_data.Phone }}</p>				
 			</div>
-             <div class="card">
-                <h2>Show Matches</h2>
-                <p>Job Title:</p>
-                <p></p>
-            </div>
         </div>
 		<div class="bigBoxContractor">
 			<h2>Create Job Posting</h2>
@@ -406,7 +397,7 @@ iframe {
 }
 
 .card {
-  width: 25%; 
+  width: 52%; 
   height: 200px;
   box-shadow: 5px -5px 14px 5px rgba(0, 0, 0, 0.05);
   border-bottom:8px solid rgba(11, 63, 87, 1);
@@ -612,7 +603,7 @@ textarea {
 
 .jobForm button {
     grid-column: span 2; /* Span both columns */
-    background-color: #4CAF50;
+    background-color: #073bb4;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -621,7 +612,7 @@ textarea {
 }
 
 .jobForm button:hover {
-    background-color: #45a049;
+    background-color: #687eb1;
 }
 
 
