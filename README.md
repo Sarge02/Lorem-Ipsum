@@ -110,7 +110,22 @@ This is an example of how you may give instructions on setting up your project l
 To get a local copy up and running follow these simple example steps.
 
 <!-- ### Prerequisites This is an example of how to list things you need to use the software and how to install them. -->
+## How to Push/Pull from Git
 
+If your local machine has changes done that differ from the version in github it would be best to update github with the new changes. This means "push" the changes from the local machine to github. First the changes need to be commited. 
+```sh
+git add .
+git commit -m "Your commit message"
+```
+Then push the changes.
+```sh
+git push <remote-name> <branch-name>
+```
+The opposite of pushing commits is to pull. Pulling from github refers to pulling from git to the local machine in order to make changes. 
+```sh
+git merge origin/main
+```
+If there are merge errors github will request the user to fix them then the pull is complete.
 
 ### Installation
 
