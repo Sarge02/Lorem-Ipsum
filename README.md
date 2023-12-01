@@ -115,11 +115,23 @@ The link is found at https://github.com/Sarge02/Lorem-Ipsum by navigating to the
 As aforementioned, this is the link that will be pasted into VSCode. Once pasted, hit enter and file explorer will open, prompting you to choose a file to clone the repository into. From here, you can make a new folder or select a pre-existing folder.
 The project is now set up and ready to be viewed and/or edited.
 
-Updated code can be pulled from the git repository by navigating to the sidebar in VSCode and clicking the button, named Source Control, with three circles. 
+<!-- ### Prerequisites This is an example of how to list things you need to use the software and how to install them. -->
+## How to Push/Pull from Git
 
-From this button, you will now be viewing the source control/git screen. Clicking the ellipses in the corner will open a drop down menu showing all the possible options for the project in git.
-
-As seen above, in the dropdown menu, hovering over the 10th option label “Pull, Push” and then selecting the 2nd option from the subsequent dropdown will allow you to pull from the git repository and be up to date with the latest code. 
+If your local machine has changes done that differ from the version in github it would be best to update github with the new changes. This means "push" the changes from the local machine to github. First the changes need to be commited. 
+```sh
+git add .
+git commit -m "Your commit message"
+```
+Then push the changes.
+```sh
+git push <remote-name> <branch-name>
+```
+The opposite of pushing commits is to pull. Pulling from github refers to pulling from git to the local machine in order to make changes. 
+```sh
+git merge origin/main
+```
+If there are merge errors github will request the user to fix them then the pull is complete.
 
 ### Installation
 
