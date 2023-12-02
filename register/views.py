@@ -3,6 +3,7 @@ from django.urls import resolve
 from django.shortcuts import render
 import json
 times = 0
+
 def register(request):
     global times
     print('Register Page Opened!')
